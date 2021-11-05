@@ -50,6 +50,11 @@ class AssertYourselfTests: XCTestCase {
         let optionalValue: StructWithDescribing? = StructWithDescribing(x: 1, y: 2)
         XCTAssertNil(optionalValue)
     }
+    
+    func test_assertEqual(){
+        let actual = "actual"
+        XCTAssertEqual(actual, "expected")
+    }
 }
 
 struct SimpleStruct {
