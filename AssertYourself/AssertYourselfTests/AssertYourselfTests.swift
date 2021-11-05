@@ -35,4 +35,34 @@ class AssertYourselfTests: XCTestCase {
         let success = true
         XCTAssertTrue(success)
     }
+    
+    func test_assertNil(){
+        let optionalValue: Int? = 20
+        XCTAssertNil(optionalValue)
+    }
+    
+    func test_assertNil_withSimpleStruct(){
+        let optionalValue: SimpleStruct? = SimpleStruct(x: 1, y: 2)
+        XCTAssertNil(optionalValue)
+    }
+    
+    func test_assertNil_withSelfDescribingType(){
+        let optionalValue: StructWithDescribing? = StructWithDescribing(x: 1, y: 2)
+        XCTAssertNil(optionalValue)
+    }
 }
+
+struct SimpleStruct {
+    let x: Int
+    let y: Int
+    
+}
+
+
+struct StructWithDescribing: CustomStringConvertible {
+    let x: Int
+    let y: Int
+    
+    var description: String { "value x: \(x) and y: \(y)"}
+}
+
