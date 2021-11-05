@@ -10,6 +10,10 @@ import XCTest
 
 class AssertYourselfTests: XCTestCase {
     func test_fail(){
-        XCTFail()
+//        XCTFail()
+    }
+    
+    func test_fail_withSimpleMessage(){
+        XCTFail("we have a problem")
     }
 }
