@@ -24,6 +24,7 @@ class AssertYourselfTests: XCTestCase {
     
     //MARK: Don't do this!
     func test_fail_avoidConditionalCode(){
+        
         let success = true
         if !success {
             XCTFail()
@@ -32,8 +33,11 @@ class AssertYourselfTests: XCTestCase {
     
     //MARK: Do this!
     func test_fail_asserttrue(){
-        let success = true
-        XCTAssertTrue(success)
+        measure {
+            let success = true
+            XCTAssertTrue(success)
+        }
+       
     }
     
     func test_assertNil(){
@@ -54,6 +58,11 @@ class AssertYourselfTests: XCTestCase {
     func test_assertEqual(){
         let actual = "actual"
         XCTAssertEqual(actual, "expected")
+    }
+    
+    func test_assertEqual_withOptional(){
+        let result: String? = "foo"
+        XCTAssertEqual(result, "bar")
     }
 }
 
