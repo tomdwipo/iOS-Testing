@@ -13,9 +13,10 @@
 		7974567B2736A6BC00F456A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797456792736A6BC00F456A6 /* Main.storyboard */; };
 		7974567D2736A6C200F456A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7974567C2736A6C200F456A6 /* Assets.xcassets */; };
 		797456802736A6C200F456A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7974567E2736A6C200F456A6 /* LaunchScreen.storyboard */; };
-		7974568B2736A6C200F456A6 /* LifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7974568A2736A6C200F456A6 /* LifeCycleTests.swift */; };
-		797456952736A6C200F456A6 /* LifeCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456942736A6C200F456A6 /* LifeCycleUITests.swift */; };
-		797456972736A6C200F456A6 /* LifeCycleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456962736A6C200F456A6 /* LifeCycleUITestsLaunchTests.swift */; };
+		797456A42736A71300F456A6 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456A32736A71300F456A6 /* MyClass.swift */; };
+		797456A62736A7B100F456A6 /* MyClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456A52736A7B100F456A6 /* MyClassTests.swift */; };
+		797456A92736A8A000F456A6 /* LifeCycleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456A72736A8A000F456A6 /* LifeCycleUITestsLaunchTests.swift */; };
+		797456AA2736A8A000F456A6 /* LifeCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797456A82736A8A000F456A6 /* LifeCycleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		7974567F2736A6C200F456A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797456812736A6C200F456A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797456862736A6C200F456A6 /* LifeCycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7974568A2736A6C200F456A6 /* LifeCycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleTests.swift; sourceTree = "<group>"; };
 		797456902736A6C200F456A6 /* LifeCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		797456942736A6C200F456A6 /* LifeCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleUITests.swift; sourceTree = "<group>"; };
-		797456962736A6C200F456A6 /* LifeCycleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		797456A32736A71300F456A6 /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		797456A52736A7B100F456A6 /* MyClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTests.swift; sourceTree = "<group>"; };
+		797456A72736A8A000F456A6 /* LifeCycleUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		797456A82736A8A000F456A6 /* LifeCycleUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7974567C2736A6C200F456A6 /* Assets.xcassets */,
 				7974567E2736A6C200F456A6 /* LaunchScreen.storyboard */,
 				797456812736A6C200F456A6 /* Info.plist */,
+				797456A32736A71300F456A6 /* MyClass.swift */,
 			);
 			path = LifeCycle;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 		797456892736A6C200F456A6 /* LifeCycleTests */ = {
 			isa = PBXGroup;
 			children = (
-				7974568A2736A6C200F456A6 /* LifeCycleTests.swift */,
+				797456A52736A7B100F456A6 /* MyClassTests.swift */,
 			);
 			path = LifeCycleTests;
 			sourceTree = "<group>";
@@ -121,8 +124,8 @@
 		797456932736A6C200F456A6 /* LifeCycleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				797456942736A6C200F456A6 /* LifeCycleUITests.swift */,
-				797456962736A6C200F456A6 /* LifeCycleUITestsLaunchTests.swift */,
+				797456A82736A8A000F456A6 /* LifeCycleUITests.swift */,
+				797456A72736A8A000F456A6 /* LifeCycleUITestsLaunchTests.swift */,
 			);
 			path = LifeCycleUITests;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 					};
 					7974568F2736A6C200F456A6 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 						TestTargetID = 7974566F2736A6BC00F456A6;
 					};
 				};
@@ -258,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797456A42736A71300F456A6 /* MyClass.swift in Sources */,
 				797456782736A6BC00F456A6 /* ViewController.swift in Sources */,
 				797456742736A6BC00F456A6 /* AppDelegate.swift in Sources */,
 				797456762736A6BC00F456A6 /* SceneDelegate.swift in Sources */,
@@ -268,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7974568B2736A6C200F456A6 /* LifeCycleTests.swift in Sources */,
+				797456A62736A7B100F456A6 /* MyClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797456952736A6C200F456A6 /* LifeCycleUITests.swift in Sources */,
-				797456972736A6C200F456A6 /* LifeCycleUITestsLaunchTests.swift in Sources */,
+				797456AA2736A8A000F456A6 /* LifeCycleUITests.swift in Sources */,
+				797456A92736A8A000F456A6 /* LifeCycleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -550,6 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.LifeCycleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LifeCycle;
@@ -560,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
