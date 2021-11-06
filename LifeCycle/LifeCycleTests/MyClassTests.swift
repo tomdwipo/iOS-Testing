@@ -9,6 +9,7 @@ import XCTest
 @testable import LifeCycle
 
 class MyClassTests: XCTestCase {
+    let sut = MyClass()
 
     //MARK: after infra is okay delete them
 //    func test_zero(){
@@ -16,15 +17,13 @@ class MyClassTests: XCTestCase {
 //    }
     
     func test_methodOne(){
-        let sut = MyClass()
         
         sut.methodOne()
         
-        XCTFail("Failed, ya")
+//        XCTFail("Failed, ya")
     }
     
     func test_methodTwo(){
-        let sut = MyClass()
         
         sut.methodTwo()
         
