@@ -13,9 +13,10 @@
 		796343E62737C5EC007F179E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796343E42737C5EC007F179E /* Main.storyboard */; };
 		796343E82737C5F1007F179E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796343E72737C5F1007F179E /* Assets.xcassets */; };
 		796343EB2737C5F1007F179E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796343E92737C5F1007F179E /* LaunchScreen.storyboard */; };
-		796343F62737C5F1007F179E /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796343F52737C5F1007F179E /* CodeCoverageTests.swift */; };
 		796344002737C5F1007F179E /* CodeCoverageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796343FF2737C5F1007F179E /* CodeCoverageUITests.swift */; };
 		796344022737C5F1007F179E /* CodeCoverageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796344012737C5F1007F179E /* CodeCoverageUITestsLaunchTests.swift */; };
+		7963440F2737C70D007F179E /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963440E2737C70D007F179E /* CoveredClass.swift */; };
+		796344112737C788007F179E /* CoveredClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796344102737C788007F179E /* CoveredClassTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		796343EA2737C5F1007F179E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		796343EC2737C5F1007F179E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796343F12737C5F1007F179E /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		796343F52737C5F1007F179E /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		796343FB2737C5F1007F179E /* CodeCoverageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		796343FF2737C5F1007F179E /* CodeCoverageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageUITests.swift; sourceTree = "<group>"; };
 		796344012737C5F1007F179E /* CodeCoverageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7963440E2737C70D007F179E /* CoveredClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoveredClass.swift; sourceTree = "<group>"; };
+		796344102737C788007F179E /* CoveredClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoveredClassTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				796343E72737C5F1007F179E /* Assets.xcassets */,
 				796343E92737C5F1007F179E /* LaunchScreen.storyboard */,
 				796343EC2737C5F1007F179E /* Info.plist */,
+				7963440E2737C70D007F179E /* CoveredClass.swift */,
 			);
 			path = CodeCoverage;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 		796343F42737C5F1007F179E /* CodeCoverageTests */ = {
 			isa = PBXGroup;
 			children = (
-				796343F52737C5F1007F179E /* CodeCoverageTests.swift */,
+				796344102737C788007F179E /* CoveredClassTests.swift */,
 			);
 			path = CodeCoverageTests;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				796343E32737C5EC007F179E /* ViewController.swift in Sources */,
 				796343DF2737C5EC007F179E /* AppDelegate.swift in Sources */,
 				796343E12737C5EC007F179E /* SceneDelegate.swift in Sources */,
+				7963440F2737C70D007F179E /* CoveredClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796343F62737C5F1007F179E /* CodeCoverageTests.swift in Sources */,
+				796344112737C788007F179E /* CoveredClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
