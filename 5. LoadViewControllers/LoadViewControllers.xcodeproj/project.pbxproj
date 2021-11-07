@@ -17,6 +17,8 @@
 		79373824273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373823273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift */; };
 		7937383127381AE800C3F060 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383027381AE800C3F060 /* TestingAppDelegate.swift */; };
 		7937383327381B7C00C3F060 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383227381B7C00C3F060 /* main.swift */; };
+		7937383527381D1400C3F060 /* StoryboardBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383427381D1400C3F060 /* StoryboardBasedViewController.swift */; };
+		7937383727381E2F00C3F060 /* StoryboradBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383627381E2F00C3F060 /* StoryboradBasedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		79373823273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7937383027381AE800C3F060 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		7937383227381B7C00C3F060 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7937383427381D1400C3F060 /* StoryboardBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewController.swift; sourceTree = "<group>"; };
+		7937383627381E2F00C3F060 /* StoryboradBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboradBasedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				7937380B273819B100C3F060 /* LaunchScreen.storyboard */,
 				7937380E273819B100C3F060 /* Info.plist */,
 				7937383227381B7C00C3F060 /* main.swift */,
+				7937383427381D1400C3F060 /* StoryboardBasedViewController.swift */,
 			);
 			path = LoadViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				79373817273819B100C3F060 /* LoadViewControllersTests.swift */,
 				7937383027381AE800C3F060 /* TestingAppDelegate.swift */,
+				7937383627381E2F00C3F060 /* StoryboradBasedViewControllerTests.swift */,
 			);
 			path = LoadViewControllersTests;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79373805273819AE00C3F060 /* ViewController.swift in Sources */,
+				7937383527381D1400C3F060 /* StoryboardBasedViewController.swift in Sources */,
 				79373801273819AE00C3F060 /* AppDelegate.swift in Sources */,
 				7937383327381B7C00C3F060 /* main.swift in Sources */,
 			);
@@ -272,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79373818273819B100C3F060 /* LoadViewControllersTests.swift in Sources */,
+				7937383727381E2F00C3F060 /* StoryboradBasedViewControllerTests.swift in Sources */,
 				7937383127381AE800C3F060 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

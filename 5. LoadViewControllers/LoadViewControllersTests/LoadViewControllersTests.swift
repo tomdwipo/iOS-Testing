@@ -10,8 +10,5 @@ import XCTest
 
 class LoadViewControllersTests: XCTestCase {
 
-    func test_zero(){
-        XCTFail("Tests not yet implemented in LoadViewControllers")
-    }
-
+  
 }
