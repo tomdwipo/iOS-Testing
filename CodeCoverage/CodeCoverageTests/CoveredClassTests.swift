@@ -10,6 +10,7 @@ import XCTest
 
 class CoveredClassTests: XCTestCase {
 
+    //MARK: Cover a Condition
     func test_max_with1And2_shouldReturn2(){
         let result = CoveredClass.max(1, 2)
         XCTAssertEqual(result, 2)
@@ -20,6 +21,7 @@ class CoveredClassTests: XCTestCase {
         XCTAssertEqual(result, 3)
     }
     
+    //MARK: Cover a Lopp
     func test_commaSeparated_from2to4_shouldReturn234SeparatedByComma(){
         let result = CoveredClass.commaSeparated(from: 2, to: 4)
         XCTAssertEqual(result, "2,3,4")
