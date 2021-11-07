@@ -31,4 +31,13 @@ class CoveredClassTests: XCTestCase {
         let result = CoveredClass.commaSeparated(from: 2, to: 2)
         XCTAssertEqual(result, "2")
     }
+    
+    //MARK: Cover a sequence
+    func test_area_withWidth7_shouldReturnBe49(){
+        let sut = CoveredClass()
+        
+        sut.width = 7
+        
+        XCTAssertEqual(sut.area, 49)
+    }
 }
