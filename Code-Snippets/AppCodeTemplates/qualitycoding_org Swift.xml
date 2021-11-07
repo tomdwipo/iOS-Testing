@@ -1,0 +1,99 @@
+<templateSet group="qualitycoding.org Swift">
+  <template name="action" value="@IBAction private func $ACTION$() {&#10;    $END$&#10;}&#10;" description="IBAction method, no sender" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="outs" value="@IBOutlet private(set) var $OUTLET$: $TYPE$!$END$" description="strong IBOutlet" toReformat="true" toShortenFQNames="true">
+    <variable name="OUTLET" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="outw" value="@IBOutlet private(set) weak var $OUTLET$: $TYPE$!$END$" description="weak IBOutlet" toReformat="true" toShortenFQNames="true">
+    <variable name="OUTLET" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="setup" value="override func setUp() {&#10;    super.setUp()&#10;    $END$&#10;}&#10;" description="Test fixure set-up" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="teardown" value="override func tearDown() {&#10;    $END$&#10;    super.tearDown()&#10;}&#10;" description="Test fixture tear-down" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="test" value="func test_$NAME$() throws {&#10;    $END$&#10;}&#10;" description="Test case" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;methodName_withCertainState_shouldDoSomething&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="testbutton" value="func test_tapping$BUTTON_CAPITALIZED$_should$DO_SOMETHING$() throws {&#10;    sut.loadViewIfNeeded()&#10;&#10;    sut.$BUTTON_VAR$.sendActions(for: .touchUpInside)&#10;&#10;    $END$&#10;}&#10;" description="Test UIButton tap" toReformat="true" toShortenFQNames="true">
+    <variable name="BUTTON_CAPITALIZED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BUTTON_VAR" expression="decapitalize(BUTTON_CAPITALIZED)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="testoutlet" value="func test_outlets_shouldBeConnected() throws {&#10;    sut.loadViewIfNeeded()&#10;&#10;    XCTAssertNotNil(sut.$OUTLET_VAR$, &quot;$OUTLET_VAR$&quot;)&#10;}&#10;" description="Test IBOutlet Connections" toReformat="true" toShortenFQNames="true">
+    <variable name="OUTLET_VAR" expression="decapitalize(OUTLET_CAPITALIZED)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="vcstoryboard-ios12" value="let storyboard = UIStoryboard(name: &quot;$STORYBOARD$&quot;, bundle: nil)&#10;let sut = storyboard.instantiateViewController(withIdentifier: String(describing: $VC_TYPE$.self)) as! $VC_TYPE$&#10;sut.loadViewIfNeeded()&#10;" description="Load View Controller Pre-iOS 13 from Storyboard" toReformat="true" toShortenFQNames="true">
+    <variable name="STORYBOARD" expression="" defaultValue="&quot;Storyboard&quot;" alwaysStopAt="true" />
+    <variable name="VC_TYPE" expression="" defaultValue="&quot;SpecificViewController&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.statement.context" value="true" />
+    </context>
+  </template>
+  <template name="testhelper" value="file: StaticString = #filePath, line: UInt = #line" description="Test helper file &amp; line parameters" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.context" value="true" />
+      <option name="swift.lang.declaration.context" value="false" />
+      <option name="swift.lang.statement.context" value="false" />
+    </context>
+  </template>
+  <template name="assertnotnil" value="XCTAssertNotNil(sut.$PROPERTY$, &quot;$PROPERTY$&quot;)" description="Assert that property is not nil" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.statement.context" value="true" />
+    </context>
+  </template>
+  <template name="vcstoryboard" value="let storyboard = UIStoryboard(name: &quot;$STORYBOARD$&quot;, bundle: nil)&#10;let sut: $VC_TYPE$ = storyboard.instantiateViewController(identifier: String(describing: $VC_TYPE$.self))&#10;sut.loadViewIfNeeded()&#10;" description="Load View Controller from Storyboard - iOS 13+" toReformat="true" toShortenFQNames="true">
+    <variable name="STORYBOARD" expression="" defaultValue="&quot;Storyboard&quot;" alwaysStopAt="true" />
+    <variable name="VC_TYPE" expression="" defaultValue="&quot;SpecificViewController&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="swift.lang.statement.context" value="true" />
+    </context>
+  </template>
+  <template name="setupwitherror" value="override func setUpWithError() throws {&#10;    try super.setUpWithError()&#10;    $END$&#10;}&#10;" description="Throwing test fixture set-up" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="teardownwitherror" value="override func tearDownWithError() throws {&#10;    $END$&#10;    try super.tearDownWithError()&#10;}&#10;" description="Throwing test fixture tear-down" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="initcoder" value="@available(*, unavailable)&#10;required init?(coder: NSCoder) {&#10;    fatalError(&quot;init(coder:) has not been implemented&quot;)&#10;}&#10;" description="Fill in init?(code: NSCoder) as unavailabile" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.declaration.context" value="true" />
+    </context>
+  </template>
+  <template name="disable" value="try XCTSkipIf(true, &quot;Disabled&quot;)" description="Skip Test to Disable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="swift.lang.statement.context" value="true" />
+    </context>
+  </template>
+</templateSet>

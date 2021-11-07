@@ -1,0 +1,85 @@
+<templateSet group="qualitycoding.org Objective-C">
+  <template name="props" value="@property (nonatomic, strong) $DECLARATION$;$END$" description="strong @property" toReformat="true" toShortenFQNames="true">
+    <variable name="DECLARATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="setup" value="- (void)setUp&#10;{&#10;    [super setUp];&#10;    $END$&#10;}" description="Test fixture set-up" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="teardown" value="- (void)tearDown&#10;{&#10;    $END$&#10;    [super tearDown];&#10;}" description="Test fixture tear-down" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="test" value="- (void)test_$NAME$&#10;{&#10;    $END$&#10;}" description="Test case" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;methodName_withCertainState_shouldDoSomething&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="testbutton" value="- (void)test_tapping$BUTTON_CAPITALIZED$_should$DO_SOMETHING$&#10;{&#10;    [sut loadViewIfNeeded];&#10;    &#10;    [sut.$BUTTON_VAR$ sendActionsForControlEvents:UIControlEventTouchUpInside];&#10;    &#10;    $END$&#10;}&#10;" description="Test UIButton tap" toReformat="true" toShortenFQNames="true">
+    <variable name="BUTTON_CAPITALIZED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BUTTON_VAR" expression="decapitalize(BUTTON_CAPITALIZED)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="propw" value="@property (nonatomic, weak) $DECLARATION$;$END$" description="weak @property" toReformat="true" toShortenFQNames="true">
+    <variable name="DECLARATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="ws" value="__weak typeof(self) weakSelf = self;" description="Weak self" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="outs" value="@property (nonatomic, strong) IBOutlet $DECLARATION$;$END$" description="strong IBOutlet" toReformat="true" toShortenFQNames="true">
+    <variable name="DECLARATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="outw" value="@property (nonatomic, weak) IBOutlet $DECLARATION$;$END$" description="weak IBOutlet" toReformat="true" toShortenFQNames="true">
+    <variable name="DECLARATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="action" value="- (IBAction)$ACTION$&#10;{&#10;    $END$&#10;}" description="IBAction method, no sender" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="testoutlet" value="- (void)test_outlets_shouldBeConnected&#10;{&#10;    [sut loadViewIfNeeded];&#10;    &#10;    XCTAssertNotNil(sut.$OUTLET_VAR$, @&quot;$OUTLET_VAR$&quot;);&#10;}&#10;" description="Test IBOutlet Connections" toReformat="true" toShortenFQNames="true">
+    <variable name="OUTLET_VAR" expression="decapitalize(OUTLET_CAPITALIZED)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="vcstoryboard" value="UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@&quot;$STORYBOARD$&quot; bundle:nil];&#10;NSString *className = NSStringFromClass([$VC_TYPE$ class]);&#10;UIViewController *rawVC = [storyboard instantiateViewControllerWithIdentifier:className];&#10;if (![rawVC isMemberOfClass:[$VC_TYPE$ class]]) {&#10;    XCTFail(@&quot;Expected %@, but was %@&quot;, className, NSStringFromClass([rawVC class]));&#10;    return;&#10;}&#10;$VC_TYPE$ *sut = ($VC_TYPE$ *)rawVC;&#10;[sut loadViewIfNeeded];&#10;" description="Load View Controller from Storyboard" toReformat="true" toShortenFQNames="true">
+    <variable name="STORYBOARD" expression="" defaultValue="&quot;Storyboard&quot;" alwaysStopAt="true" />
+    <variable name="VC_TYPE" expression="" defaultValue="&quot;SpecificViewController&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="assertnotnil" value="XCTAssertNotNil(sut.$PROPERTY$, @&quot;$PROPERTY$&quot;);" description="Assert that property is not nil" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OC_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="disable" value="XCTSkip(@&quot;Disabled&quot;);" description="Skip Test to Disable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OC_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vcstoryboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let storyboard = UIStoryboard(name: "&lt;#Storyboard#&gt;", bundle: nil)
+let sut: &lt;#SpecificViewController#&gt; = storyboard.instantiateViewController(identifier: String(describing: &lt;#SpecificViewController#&gt;.self))
+sut.loadViewIfNeeded()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E02A5A5-4A09-41FE-AD39-BB7B14497248</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Load a view controller from a storyboard by identifier (iOS 13+)</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift Load VC from Storyboard (qualitycoding.org)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

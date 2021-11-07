@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>testbutton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func test_tapping&lt;#Button#&gt;_should&lt;#DoSomething#&gt;() throws {
+    sut.loadViewIfNeeded()
+
+    sut.&lt;#buttonOutlet#&gt;.sendActions(for: .touchUpInside)
+
+    &lt;#Assert#&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F1324E28-76A4-42A1-B262-C184E2338FA9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Define test ensuring that button tap has expected result. “sut” is System Under Test.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift Test UIButton tap (qualitycoding.org)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

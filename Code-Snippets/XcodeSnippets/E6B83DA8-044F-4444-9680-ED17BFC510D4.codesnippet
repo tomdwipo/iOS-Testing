@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vcstoryboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"&lt;#Storyboard#&gt;" bundle:nil];
+NSString *className = NSStringFromClass([&lt;#SpecificViewController#&gt; class]);
+UIViewController *rawVC = [storyboard instantiateViewControllerWithIdentifier:className];
+if (![rawVC isMemberOfClass:[&lt;#SpecificViewController#&gt; class]]) {
+    XCTFail(@"Expected %@, but was %@", className, NSStringFromClass([rawVC class]));
+    return;
+}
+&lt;#SpecificViewController#&gt; *sut = (&lt;#SpecificViewController#&gt; *)rawVC;
+[sut loadViewIfNeeded];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E6B83DA8-044F-4444-9680-ED17BFC510D4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Load a view controller from a storyboard by identifier.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Objective-C Load VC from Storyboard (qualitycoding.org)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
