@@ -1,13 +1,13 @@
 //
-//  StoryboardBasedViewController.swift
+//  XIBBasedViewController.swift
 //  LoadViewControllers
 //
-//  Created by RATAMATE on 07/11/21.
+//  Created by RATAMATE on 08/11/21.
 //
 
 import UIKit
 
-class StoryboardBasedViewController: UIViewController {
+class XIBBasedViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
@@ -16,7 +16,7 @@ class StoryboardBasedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation
