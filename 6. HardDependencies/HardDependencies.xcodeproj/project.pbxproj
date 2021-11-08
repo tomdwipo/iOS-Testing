@@ -30,6 +30,7 @@
 		79C622BF27396E24003964F3 /* MySingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622BD27396E24003964F3 /* MySingletonViewController.swift */; };
 		79C622C027396E24003964F3 /* MySingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C622BE27396E24003964F3 /* MySingletonViewController.xib */; };
 		79C622C4273970F3003964F3 /* MySingletonViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */; };
+		79C622C62739742A003964F3 /* OverrideViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622C52739742A003964F3 /* OverrideViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		79C622BD27396E24003964F3 /* MySingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonViewController.swift; sourceTree = "<group>"; };
 		79C622BE27396E24003964F3 /* MySingletonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySingletonViewController.xib; sourceTree = "<group>"; };
 		79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonViewControllerTests.swift; sourceTree = "<group>"; };
+		79C622C52739742A003964F3 /* OverrideViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				79C6228C273968B7003964F3 /* HardDependenciesTests.swift */,
 				79C622A527396918003964F3 /* TestingAppDelegate.swift */,
 				79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */,
+				79C622C52739742A003964F3 /* OverrideViewControllerTests.swift */,
 			);
 			path = HardDependenciesTests;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				79C6228D273968B7003964F3 /* HardDependenciesTests.swift in Sources */,
 				79C622C4273970F3003964F3 /* MySingletonViewControllerTests.swift in Sources */,
+				79C622C62739742A003964F3 /* OverrideViewControllerTests.swift in Sources */,
 				79C622A627396918003964F3 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

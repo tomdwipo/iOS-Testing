@@ -15,9 +15,13 @@ class OverrideViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func analytics() -> Analytics {
+        return Analytics.shared
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.shared.track(event: "viewDidAppear \(type(of: self))")
+        analytics().track(event: "viewDidAppear \(type(of: self))")
     }
     
     /*
