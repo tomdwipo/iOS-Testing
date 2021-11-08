@@ -17,6 +17,19 @@
 		79C62299273968B7003964F3 /* HardDependenciesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C62298273968B7003964F3 /* HardDependenciesUITestsLaunchTests.swift */; };
 		79C622A627396918003964F3 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622A527396918003964F3 /* TestingAppDelegate.swift */; };
 		79C622A827396963003964F3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622A727396963003964F3 /* main.swift */; };
+		79C622AA27396B2E003964F3 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622A927396B2E003964F3 /* Analytics.swift */; };
+		79C622AC27396C26003964F3 /* MySingletonAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622AB27396C26003964F3 /* MySingletonAnalytics.swift */; };
+		79C622AE27396D1F003964F3 /* InstancePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622AD27396D1F003964F3 /* InstancePropertyViewController.swift */; };
+		79C622B027396D9F003964F3 /* ClosurePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622AF27396D9F003964F3 /* ClosurePropertyViewController.swift */; };
+		79C622B327396DD4003964F3 /* OverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622B127396DD4003964F3 /* OverrideViewController.swift */; };
+		79C622B427396DD4003964F3 /* OverrideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C622B227396DD4003964F3 /* OverrideViewController.xib */; };
+		79C622B727396E00003964F3 /* InstanceInitializerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622B527396E00003964F3 /* InstanceInitializerViewController.swift */; };
+		79C622B827396E00003964F3 /* InstanceInitializerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C622B627396E00003964F3 /* InstanceInitializerViewController.xib */; };
+		79C622BB27396E0F003964F3 /* ClosureInitializerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622B927396E0F003964F3 /* ClosureInitializerViewController.swift */; };
+		79C622BC27396E0F003964F3 /* ClosureInitializerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C622BA27396E0F003964F3 /* ClosureInitializerViewController.xib */; };
+		79C622BF27396E24003964F3 /* MySingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622BD27396E24003964F3 /* MySingletonViewController.swift */; };
+		79C622C027396E24003964F3 /* MySingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C622BE27396E24003964F3 /* MySingletonViewController.xib */; };
+		79C622C4273970F3003964F3 /* MySingletonViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +64,19 @@
 		79C62298273968B7003964F3 /* HardDependenciesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardDependenciesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79C622A527396918003964F3 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		79C622A727396963003964F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		79C622A927396B2E003964F3 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		79C622AB27396C26003964F3 /* MySingletonAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonAnalytics.swift; sourceTree = "<group>"; };
+		79C622AD27396D1F003964F3 /* InstancePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewController.swift; sourceTree = "<group>"; };
+		79C622AF27396D9F003964F3 /* ClosurePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewController.swift; sourceTree = "<group>"; };
+		79C622B127396DD4003964F3 /* OverrideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideViewController.swift; sourceTree = "<group>"; };
+		79C622B227396DD4003964F3 /* OverrideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverrideViewController.xib; sourceTree = "<group>"; };
+		79C622B527396E00003964F3 /* InstanceInitializerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceInitializerViewController.swift; sourceTree = "<group>"; };
+		79C622B627396E00003964F3 /* InstanceInitializerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceInitializerViewController.xib; sourceTree = "<group>"; };
+		79C622B927396E0F003964F3 /* ClosureInitializerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewController.swift; sourceTree = "<group>"; };
+		79C622BA27396E0F003964F3 /* ClosureInitializerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosureInitializerViewController.xib; sourceTree = "<group>"; };
+		79C622BD27396E24003964F3 /* MySingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonViewController.swift; sourceTree = "<group>"; };
+		79C622BE27396E24003964F3 /* MySingletonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySingletonViewController.xib; sourceTree = "<group>"; };
+		79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +127,8 @@
 		79C62274273968B4003964F3 /* HardDependencies */ = {
 			isa = PBXGroup;
 			children = (
+				79C622C227396ED7003964F3 /* XIB */,
+				79C622C127396EB6003964F3 /* Storyboard */,
 				79C62275273968B4003964F3 /* AppDelegate.swift */,
 				79C62279273968B4003964F3 /* ViewController.swift */,
 				79C6227B273968B4003964F3 /* Main.storyboard */,
@@ -108,6 +136,8 @@
 				79C62280273968B7003964F3 /* LaunchScreen.storyboard */,
 				79C62283273968B7003964F3 /* Info.plist */,
 				79C622A727396963003964F3 /* main.swift */,
+				79C622A927396B2E003964F3 /* Analytics.swift */,
+				79C622AB27396C26003964F3 /* MySingletonAnalytics.swift */,
 			);
 			path = HardDependencies;
 			sourceTree = "<group>";
@@ -117,6 +147,7 @@
 			children = (
 				79C6228C273968B7003964F3 /* HardDependenciesTests.swift */,
 				79C622A527396918003964F3 /* TestingAppDelegate.swift */,
+				79C622C3273970F3003964F3 /* MySingletonViewControllerTests.swift */,
 			);
 			path = HardDependenciesTests;
 			sourceTree = "<group>";
@@ -128,6 +159,30 @@
 				79C62298273968B7003964F3 /* HardDependenciesUITestsLaunchTests.swift */,
 			);
 			path = HardDependenciesUITests;
+			sourceTree = "<group>";
+		};
+		79C622C127396EB6003964F3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79C622AF27396D9F003964F3 /* ClosurePropertyViewController.swift */,
+				79C622AD27396D1F003964F3 /* InstancePropertyViewController.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		79C622C227396ED7003964F3 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				79C622B127396DD4003964F3 /* OverrideViewController.swift */,
+				79C622B227396DD4003964F3 /* OverrideViewController.xib */,
+				79C622B527396E00003964F3 /* InstanceInitializerViewController.swift */,
+				79C622B627396E00003964F3 /* InstanceInitializerViewController.xib */,
+				79C622B927396E0F003964F3 /* ClosureInitializerViewController.swift */,
+				79C622BA27396E0F003964F3 /* ClosureInitializerViewController.xib */,
+				79C622BD27396E24003964F3 /* MySingletonViewController.swift */,
+				79C622BE27396E24003964F3 /* MySingletonViewController.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +289,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C622B827396E00003964F3 /* InstanceInitializerViewController.xib in Resources */,
 				79C62282273968B7003964F3 /* LaunchScreen.storyboard in Resources */,
 				79C6227F273968B7003964F3 /* Assets.xcassets in Resources */,
+				79C622B427396DD4003964F3 /* OverrideViewController.xib in Resources */,
 				79C6227D273968B4003964F3 /* Main.storyboard in Resources */,
+				79C622BC27396E0F003964F3 /* ClosureInitializerViewController.xib in Resources */,
+				79C622C027396E24003964F3 /* MySingletonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +322,15 @@
 			files = (
 				79C6227A273968B4003964F3 /* ViewController.swift in Sources */,
 				79C62276273968B4003964F3 /* AppDelegate.swift in Sources */,
+				79C622AA27396B2E003964F3 /* Analytics.swift in Sources */,
+				79C622AC27396C26003964F3 /* MySingletonAnalytics.swift in Sources */,
+				79C622AE27396D1F003964F3 /* InstancePropertyViewController.swift in Sources */,
+				79C622BF27396E24003964F3 /* MySingletonViewController.swift in Sources */,
 				79C622A827396963003964F3 /* main.swift in Sources */,
+				79C622B327396DD4003964F3 /* OverrideViewController.swift in Sources */,
+				79C622BB27396E0F003964F3 /* ClosureInitializerViewController.swift in Sources */,
+				79C622B727396E00003964F3 /* InstanceInitializerViewController.swift in Sources */,
+				79C622B027396D9F003964F3 /* ClosurePropertyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79C6228D273968B7003964F3 /* HardDependenciesTests.swift in Sources */,
+				79C622C4273970F3003964F3 /* MySingletonViewControllerTests.swift in Sources */,
 				79C622A627396918003964F3 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
