@@ -15,7 +15,7 @@ class ViewControllerTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let sut = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
         sut.loadViewIfNeeded()
-        sut.button.sendActions(for: UIControl.Event.touchUpInside)
+        tap(sut.button)
     }
 
 }
