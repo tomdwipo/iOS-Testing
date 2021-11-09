@@ -20,6 +20,7 @@
 		79854779273AA6CE000A0EFC /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79854778273AA6CE000A0EFC /* CodeNextViewController.swift */; };
 		7985477B273AAA18000A0EFC /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477A273AAA18000A0EFC /* SegueNextViewController.swift */; };
 		7985477D273AB033000A0EFC /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477C273AB033000A0EFC /* TestHelper.swift */; };
+		7985477F273ABACF000A0EFC /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477E273ABACF000A0EFC /* SpyNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		79854778273AA6CE000A0EFC /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
 		7985477A273AAA18000A0EFC /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 		7985477C273AB033000A0EFC /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		7985477E273ABACF000A0EFC /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				79854772273AA3A2000A0EFC /* TestingAppDelegate.swift */,
 				79854776273AA5B1000A0EFC /* ViewControllerTests.swift */,
 				7985477C273AB033000A0EFC /* TestHelper.swift */,
+				7985477E273ABACF000A0EFC /* SpyNavigationController.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7985477F273ABACF000A0EFC /* SpyNavigationController.swift in Sources */,
 				7985477D273AB033000A0EFC /* TestHelper.swift in Sources */,
 				79854777273AA5B1000A0EFC /* ViewControllerTests.swift in Sources */,
 				79854773273AA3A2000A0EFC /* TestingAppDelegate.swift in Sources */,

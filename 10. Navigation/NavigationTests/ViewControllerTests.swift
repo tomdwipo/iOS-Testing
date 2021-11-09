@@ -29,7 +29,7 @@ class ViewControllerTests: XCTestCase {
         
         let sut = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
         sut.loadViewIfNeeded()
-        let navigation = UINavigationController(rootViewController: sut)
+        let navigation = SpyNavigationController(rootViewController: sut)
         
         tap(sut.codePushButton)
         
@@ -49,6 +49,8 @@ class ViewControllerTests: XCTestCase {
         }
         
         XCTAssertEqual(codeNextVC.label.text, "Pushed from code")
+        
+        XCTAssertEqual(navigation.pushViewControllerArgsAnimated.last, true, "push view argument isAnimated")
     }
 
 }
