@@ -17,6 +17,10 @@
 		79ECA4D0273A522A001A06E1 /* AlertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA4CF273A522A001A06E1 /* AlertUITestsLaunchTests.swift */; };
 		79ECA4DD273A5282001A06E1 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA4DC273A5282001A06E1 /* TestingAppDelegate.swift */; };
 		79ECA4DF273A52CD001A06E1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA4DE273A52CD001A06E1 /* main.swift */; };
+		79ECA4E1273A544F001A06E1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA4E0273A544F001A06E1 /* ViewControllerTests.swift */; };
+		79ECA4E3273A5517001A06E1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA4E2273A5517001A06E1 /* TestHelpers.swift */; };
+		79ECA4EB273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ECA4EA273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework */; };
+		79ECA4EC273A5CD8001A06E1 /* ViewControllerPresentationSpy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ECA4EA273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79ECA4E6273A5909001A06E1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				79ECA4EC273A5CD8001A06E1 /* ViewControllerPresentationSpy.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		79ECA4A9273A5227001A06E1 /* Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ECA4AC273A5227001A06E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +68,9 @@
 		79ECA4CF273A522A001A06E1 /* AlertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79ECA4DC273A5282001A06E1 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		79ECA4DE273A52CD001A06E1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		79ECA4E0273A544F001A06E1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		79ECA4E2273A5517001A06E1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		79ECA4EA273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ViewControllerPresentationSpy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ECA4EB273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,7 @@
 				79ECA4C2273A522A001A06E1 /* AlertTests */,
 				79ECA4CC273A522A001A06E1 /* AlertUITests */,
 				79ECA4AA273A5227001A06E1 /* Products */,
+				79ECA4E8273A5C0A001A06E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,8 +137,11 @@
 		79ECA4C2273A522A001A06E1 /* AlertTests */ = {
 			isa = PBXGroup;
 			children = (
+				79ECA4EA273A5CD0001A06E1 /* ViewControllerPresentationSpy.framework */,
 				79ECA4C3273A522A001A06E1 /* AlertTests.swift */,
 				79ECA4DC273A5282001A06E1 /* TestingAppDelegate.swift */,
+				79ECA4E0273A544F001A06E1 /* ViewControllerTests.swift */,
+				79ECA4E2273A5517001A06E1 /* TestHelpers.swift */,
 			);
 			path = AlertTests;
 			sourceTree = "<group>";
@@ -128,6 +153,13 @@
 				79ECA4CF273A522A001A06E1 /* AlertUITestsLaunchTests.swift */,
 			);
 			path = AlertUITests;
+			sourceTree = "<group>";
+		};
+		79ECA4E8273A5C0A001A06E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +189,7 @@
 				79ECA4BB273A522A001A06E1 /* Sources */,
 				79ECA4BC273A522A001A06E1 /* Frameworks */,
 				79ECA4BD273A522A001A06E1 /* Resources */,
+				79ECA4E6273A5909001A06E1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -271,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ECA4E1273A544F001A06E1 /* ViewControllerTests.swift in Sources */,
 				79ECA4C4273A522A001A06E1 /* AlertTests.swift in Sources */,
 				79ECA4DD273A5282001A06E1 /* TestingAppDelegate.swift in Sources */,
+				79ECA4E3273A5517001A06E1 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +532,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlertTests",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,6 +560,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlertTests",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
