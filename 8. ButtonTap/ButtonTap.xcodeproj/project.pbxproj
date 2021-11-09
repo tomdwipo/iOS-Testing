@@ -12,11 +12,11 @@
 		79ECA470273A4B84001A06E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79ECA46E273A4B84001A06E1 /* Main.storyboard */; };
 		79ECA472273A4B87001A06E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79ECA471273A4B87001A06E1 /* Assets.xcassets */; };
 		79ECA475273A4B87001A06E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79ECA473273A4B87001A06E1 /* LaunchScreen.storyboard */; };
-		79ECA480273A4B87001A06E1 /* ButtonTapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA47F273A4B87001A06E1 /* ButtonTapTests.swift */; };
 		79ECA48A273A4B87001A06E1 /* ButtonTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA489273A4B87001A06E1 /* ButtonTapUITests.swift */; };
 		79ECA48C273A4B87001A06E1 /* ButtonTapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA48B273A4B87001A06E1 /* ButtonTapUITestsLaunchTests.swift */; };
 		79ECA499273A4BCE001A06E1 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA498273A4BCE001A06E1 /* TestingAppDelegate.swift */; };
 		79ECA49B273A4C27001A06E1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA49A273A4C27001A06E1 /* main.swift */; };
+		79ECA49D273A4DAC001A06E1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECA49C273A4DAC001A06E1 /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +45,12 @@
 		79ECA474273A4B87001A06E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79ECA476273A4B87001A06E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79ECA47B273A4B87001A06E1 /* ButtonTapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79ECA47F273A4B87001A06E1 /* ButtonTapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapTests.swift; sourceTree = "<group>"; };
 		79ECA485273A4B87001A06E1 /* ButtonTapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ECA489273A4B87001A06E1 /* ButtonTapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapUITests.swift; sourceTree = "<group>"; };
 		79ECA48B273A4B87001A06E1 /* ButtonTapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79ECA498273A4BCE001A06E1 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		79ECA49A273A4C27001A06E1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		79ECA49C273A4DAC001A06E1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,8 @@
 		79ECA47E273A4B87001A06E1 /* ButtonTapTests */ = {
 			isa = PBXGroup;
 			children = (
-				79ECA47F273A4B87001A06E1 /* ButtonTapTests.swift */,
 				79ECA498273A4BCE001A06E1 /* TestingAppDelegate.swift */,
+				79ECA49C273A4DAC001A06E1 /* ViewControllerTests.swift */,
 			);
 			path = ButtonTapTests;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79ECA480273A4B87001A06E1 /* ButtonTapTests.swift in Sources */,
+				79ECA49D273A4DAC001A06E1 /* ViewControllerTests.swift in Sources */,
 				79ECA499273A4BCE001A06E1 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
