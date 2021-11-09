@@ -16,6 +16,9 @@
 		794E045B273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E045A273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift */; };
 		794E0468273A4562009A6A7C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E0467273A4562009A6A7C /* TestingAppDelegate.swift */; };
 		794E046A273A459B009A6A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E0469273A459B009A6A7C /* main.swift */; };
+		794E046D273A4790009A6A7C /* OutletConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E046B273A4790009A6A7C /* OutletConnectionsViewController.swift */; };
+		794E046E273A4790009A6A7C /* OutletConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794E046C273A4790009A6A7C /* OutletConnectionsViewController.xib */; };
+		794E0470273A4833009A6A7C /* OutletConnectionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E046F273A4833009A6A7C /* OutletConnectionsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		794E045A273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		794E0467273A4562009A6A7C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		794E0469273A459B009A6A7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		794E046B273A4790009A6A7C /* OutletConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewController.swift; sourceTree = "<group>"; };
+		794E046C273A4790009A6A7C /* OutletConnectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletConnectionsViewController.xib; sourceTree = "<group>"; };
+		794E046F273A4833009A6A7C /* OutletConnectionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 				794E0442273A44FA009A6A7C /* LaunchScreen.storyboard */,
 				794E0445273A44FA009A6A7C /* Info.plist */,
 				794E0469273A459B009A6A7C /* main.swift */,
+				794E046B273A4790009A6A7C /* OutletConnectionsViewController.swift */,
+				794E046C273A4790009A6A7C /* OutletConnectionsViewController.xib */,
 			);
 			path = OutletConnections;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				794E0467273A4562009A6A7C /* TestingAppDelegate.swift */,
+				794E046F273A4833009A6A7C /* OutletConnectionsViewControllerTests.swift */,
 			);
 			path = OutletConnectionsTests;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				794E0444273A44FA009A6A7C /* LaunchScreen.storyboard in Resources */,
 				794E0441273A44FA009A6A7C /* Assets.xcassets in Resources */,
 				794E043F273A44F7009A6A7C /* Main.storyboard in Resources */,
+				794E046E273A4790009A6A7C /* OutletConnectionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +271,7 @@
 				794E043C273A44F7009A6A7C /* ViewController.swift in Sources */,
 				794E0438273A44F7009A6A7C /* AppDelegate.swift in Sources */,
 				794E046A273A459B009A6A7C /* main.swift in Sources */,
+				794E046D273A4790009A6A7C /* OutletConnectionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				794E0468273A4562009A6A7C /* TestingAppDelegate.swift in Sources */,
+				794E0470273A4833009A6A7C /* OutletConnectionsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
