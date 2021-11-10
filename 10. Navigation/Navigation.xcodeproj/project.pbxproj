@@ -21,6 +21,9 @@
 		7985477B273AAA18000A0EFC /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477A273AAA18000A0EFC /* SegueNextViewController.swift */; };
 		7985477D273AB033000A0EFC /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477C273AB033000A0EFC /* TestHelper.swift */; };
 		7985477F273ABACF000A0EFC /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7985477E273ABACF000A0EFC /* SpyNavigationController.swift */; };
+		79B2FEB2273B79550082FECF /* TestableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2FEB1273B79550082FECF /* TestableViewController.swift */; };
+		79B2FEB8273B90510082FECF /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B2FEB7273B90510082FECF /* ViewControllerPresentationSpy.xcframework */; };
+		79B2FEB9273B905A0082FECF /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79B2FEB7273B90510082FECF /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,19 @@
 			remoteInfo = Navigation;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79B2FEB5273B8E700082FECF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				79B2FEB9273B905A0082FECF /* ViewControllerPresentationSpy.xcframework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7985473F273AA2D1000A0EFC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,8 @@
 		7985477A273AAA18000A0EFC /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 		7985477C273AB033000A0EFC /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		7985477E273ABACF000A0EFC /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
+		79B2FEB1273B79550082FECF /* TestableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableViewController.swift; sourceTree = "<group>"; };
+		79B2FEB7273B90510082FECF /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B2FEB8273B90510082FECF /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,10 +144,12 @@
 		79854758273AA2D5000A0EFC /* NavigationTests */ = {
 			isa = PBXGroup;
 			children = (
+				79B2FEB7273B90510082FECF /* ViewControllerPresentationSpy.xcframework */,
 				79854772273AA3A2000A0EFC /* TestingAppDelegate.swift */,
 				79854776273AA5B1000A0EFC /* ViewControllerTests.swift */,
 				7985477C273AB033000A0EFC /* TestHelper.swift */,
 				7985477E273ABACF000A0EFC /* SpyNavigationController.swift */,
+				79B2FEB1273B79550082FECF /* TestableViewController.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -169,6 +190,7 @@
 				79854751273AA2D5000A0EFC /* Sources */,
 				79854752273AA2D5000A0EFC /* Frameworks */,
 				79854753273AA2D5000A0EFC /* Resources */,
+				79B2FEB5273B8E700082FECF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -288,6 +310,7 @@
 				7985477F273ABACF000A0EFC /* SpyNavigationController.swift in Sources */,
 				7985477D273AB033000A0EFC /* TestHelper.swift in Sources */,
 				79854777273AA5B1000A0EFC /* ViewControllerTests.swift in Sources */,
+				79B2FEB2273B79550082FECF /* TestableViewController.swift in Sources */,
 				79854773273AA3A2000A0EFC /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +536,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NavigationTests",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -537,6 +564,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NavigationTests",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

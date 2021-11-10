@@ -42,6 +42,9 @@ class ViewController: UIViewController {
         }
     }
 
+    deinit {
+        print(">> ViewController.deinit")
+    }
 
 }
 

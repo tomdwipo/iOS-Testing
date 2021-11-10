@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import ViewControllerPresentationSpy
 
 @testable import Navigation
 
@@ -52,5 +53,40 @@ class ViewControllerTests: XCTestCase {
         
         XCTAssertEqual(navigation.pushViewControllerArgsAnimated.last, true, "push view argument isAnimated")
     }
+    
+    //MARK: Dont recommended
+//    func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController(){
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        let sut = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
+//        sut.loadViewIfNeeded()
+//        let _ = UINavigationController(rootViewController: sut)
+//        
+//        UIApplication.shared.windows.first?.rootViewController = sut
+//        tap(sut.codeModalButton)
+//        let presentVC = sut.presentedViewController
+//        guard let codeNextVC = presentVC as? CodeNextViewController else {
+//            XCTFail("Expected CodeNextViewController, " + "but was \(String(describing: presentVC))")
+//            return
+//        }
+//        XCTAssertEqual(codeNextVC.label.text, "Modal from code")
+//        
+//    }
 
+    func test_tappingCodeModalButton_shouldPresentCodeNextViewController(){
+        let presentationVerifier = PresentationVerifier()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let sut = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
+        sut.loadViewIfNeeded()
+        let _ = UINavigationController(rootViewController: sut)
+               
+        tap(sut.codeModalButton)
+      
+        let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: sut)
+      
+        XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
+        
+    }
 }
