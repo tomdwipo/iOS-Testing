@@ -19,6 +19,10 @@ class SegueNextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    deinit{
+        print(">> SegueNextViewController.deinit")
+
+    }
 
     /*
     // MARK: - Navigation
