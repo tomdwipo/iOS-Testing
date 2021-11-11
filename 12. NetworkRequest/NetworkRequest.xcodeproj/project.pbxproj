@@ -18,6 +18,7 @@
 		791A40D2273D61F700E21AD6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A40D1273D61F700E21AD6 /* main.swift */; };
 		791A40D4273D691E00E21AD6 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A40D3273D691E00E21AD6 /* ViewControllerTests.swift */; };
 		791A40D6273D69A100E21AD6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A40D5273D69A100E21AD6 /* TestHelpers.swift */; };
+		791A40D8273D6CB600E21AD6 /* MockUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A40D7273D6CB600E21AD6 /* MockUrlSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		791A40D1273D61F700E21AD6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		791A40D3273D691E00E21AD6 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		791A40D5273D69A100E21AD6 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		791A40D7273D6CB600E21AD6 /* MockUrlSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				791A40CF273D618A00E21AD6 /* TestingAppDelegate.swift */,
 				791A40D3273D691E00E21AD6 /* ViewControllerTests.swift */,
 				791A40D5273D69A100E21AD6 /* TestHelpers.swift */,
+				791A40D7273D6CB600E21AD6 /* MockUrlSession.swift */,
 			);
 			path = NetworkRequestTests;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791A40D8273D6CB600E21AD6 /* MockUrlSession.swift in Sources */,
 				791A40D4273D691E00E21AD6 /* ViewControllerTests.swift in Sources */,
 				791A40D0273D618A00E21AD6 /* TestingAppDelegate.swift in Sources */,
 				791A40D6273D69A100E21AD6 /* TestHelpers.swift in Sources */,
