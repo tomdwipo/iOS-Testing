@@ -28,6 +28,8 @@ class ViewController: UIViewController {
 
     @IBAction private func buttonTapped(){
         searchForBook(terms: "out from boneville")
+        searchForBook(terms: "the great cow race")
+
     }
     
     private func searchForBook(terms: String) {
