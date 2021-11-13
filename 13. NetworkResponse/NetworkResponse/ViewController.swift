@@ -22,9 +22,11 @@ class ViewController: UIViewController {
 
     var session: URLSessionProtocol = URLSession.shared
 
+    var handleResults: ([SearchResult]) -> Void = { print($0) }
+    
     private(set) var results: [SearchResult] = [] {
         didSet {
-            print(results)
+            handleResults(results)
         }
     }
     
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func buttonTapped(){
-        searchForBook(terms: "out from boneville")
+        searchForBook(terms: "out")
 
     }
     
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
         let request = URLRequest(url: url)
         dataTask = self.session.dataTask(with: request, completionHandler: { [weak self] (data: Data?, response: URLResponse?, error: Error?) -> Void in
             guard let self = self else { return }
+
             var decoded: Search?
             var errorMessage: String?
             if let error = error {
@@ -63,6 +66,8 @@ class ViewController: UIViewController {
                     self.results = decoded.results
                 }
                 if let errorMessage = errorMessage {
+                    print("errorMessage: \(errorMessage)")
+
                     self.showError(errorMessage)
                 }
                 self.dataTask = nil
@@ -91,7 +96,7 @@ struct Search: Decodable {
 struct SearchResult: Decodable, Equatable {
     let artistName: String
     let trackName: String
-    let averageUserTesting: Float
+    let averageUserRating: Float
     let genres: [String]
 }
 

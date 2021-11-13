@@ -18,6 +18,7 @@
 		791A4118273E233700E21AD6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A4117273E233700E21AD6 /* main.swift */; };
 		791A411A273E265800E21AD6 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A4119273E265800E21AD6 /* ViewControllerTests.swift */; };
 		791A411C273E3C4300E21AD6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A411B273E3C4300E21AD6 /* TestHelpers.swift */; };
+		79A97A48273FEAF800AA4E96 /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		791A4117273E233700E21AD6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		791A4119273E265800E21AD6 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		791A411B273E3C4300E21AD6 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				791A4115273E22FA00E21AD6 /* TestingAppDelegate.swift */,
 				791A4119273E265800E21AD6 /* ViewControllerTests.swift */,
 				791A411B273E3C4300E21AD6 /* TestHelpers.swift */,
+				79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791A411A273E265800E21AD6 /* ViewControllerTests.swift in Sources */,
+				79A97A48273FEAF800AA4E96 /* SpyURLSession.swift in Sources */,
 				791A4116273E22FA00E21AD6 /* TestingAppDelegate.swift in Sources */,
 				791A411C273E3C4300E21AD6 /* TestHelpers.swift in Sources */,
 			);
