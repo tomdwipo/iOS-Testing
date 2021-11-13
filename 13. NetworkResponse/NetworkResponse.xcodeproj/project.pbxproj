@@ -19,6 +19,9 @@
 		791A411A273E265800E21AD6 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A4119273E265800E21AD6 /* ViewControllerTests.swift */; };
 		791A411C273E3C4300E21AD6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791A411B273E3C4300E21AD6 /* TestHelpers.swift */; };
 		79A97A48273FEAF800AA4E96 /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */; };
+		79A97A4A274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A97A49274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework */; };
+		79A97A4C274000B400AA4E96 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79A97A49274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		79A97A4E274001BD00AA4E96 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97A4D274001BD00AA4E96 /* TestError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79A97A4B274000AE00AA4E96 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				79A97A4C274000B400AA4E96 /* ViewControllerPresentationSpy.xcframework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		791A40E2273E229900E21AD6 /* NetworkResponse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkResponse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		791A40E5273E229900E21AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +71,8 @@
 		791A4119273E265800E21AD6 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		791A411B273E3C4300E21AD6 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
+		79A97A49274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
+		79A97A4D274001BD00AA4E96 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A97A4A274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,10 +138,12 @@
 		791A40FB273E229F00E21AD6 /* NetworkResponseTests */ = {
 			isa = PBXGroup;
 			children = (
+				79A97A49274000A000AA4E96 /* ViewControllerPresentationSpy.xcframework */,
 				791A4115273E22FA00E21AD6 /* TestingAppDelegate.swift */,
 				791A4119273E265800E21AD6 /* ViewControllerTests.swift */,
 				791A411B273E3C4300E21AD6 /* TestHelpers.swift */,
 				79A97A47273FEAF800AA4E96 /* SpyURLSession.swift */,
+				79A97A4D274001BD00AA4E96 /* TestError.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -163,6 +184,7 @@
 				791A40F4273E229F00E21AD6 /* Sources */,
 				791A40F5273E229F00E21AD6 /* Frameworks */,
 				791A40F6273E229F00E21AD6 /* Resources */,
+				79A97A4B274000AE00AA4E96 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -278,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791A411A273E265800E21AD6 /* ViewControllerTests.swift in Sources */,
+				79A97A4E274001BD00AA4E96 /* TestError.swift in Sources */,
 				79A97A48273FEAF800AA4E96 /* SpyURLSession.swift in Sources */,
 				791A4116273E22FA00E21AD6 /* TestingAppDelegate.swift in Sources */,
 				791A411C273E3C4300E21AD6 /* TestHelpers.swift in Sources */,
