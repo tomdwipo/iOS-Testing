@@ -71,4 +71,25 @@ class ViewControllerTests: XCTestCase {
         let allowChange = shouldChangeCharacters(in: sut.passwordField, replacement: "ab")
         XCTAssertEqual(allowChange, true)
     }
+    
+    func test_shouldReturn_withPassword_shouldPerformLogin(){
+        sut.usernameField.text = "USERNAME"
+        sut.passwordField.text = "PASSWORD"
+        
+        shouldReturn(in: sut.passwordField)
+    }
+    
+    func test_shouldReturn_withUsername_shouldMoveInputFocusToPassword(){
+        putInViewHierarchy(sut)
+        shouldReturn(in: sut.usernameField)
+        XCTAssertTrue(sut.passwordField.isFirstResponder)
+    }
+    
+    func test_shouldReturn_withPassword_shouldDismissKeyboard(){
+        putInViewHierarchy(sut)
+        sut.passwordField.becomeFirstResponder()
+        XCTAssertTrue(sut.passwordField.isFirstResponder, "precondition")
+        shouldReturn(in: sut.passwordField)
+        XCTAssertFalse(sut.passwordField.isFirstResponder)
+    }
 }
