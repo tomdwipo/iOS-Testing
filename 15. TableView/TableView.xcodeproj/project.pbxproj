@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79A97AA027414CDE00AA4E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97A9F27414CDE00AA4E96 /* AppDelegate.swift */; };
-		79A97AA427414CDE00AA4E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AA327414CDE00AA4E96 /* ViewController.swift */; };
 		79A97AA727414CDE00AA4E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AA527414CDE00AA4E96 /* Main.storyboard */; };
 		79A97AA927414CE400AA4E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AA827414CE400AA4E96 /* Assets.xcassets */; };
 		79A97AAC27414CE400AA4E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AAA27414CE400AA4E96 /* LaunchScreen.storyboard */; };
@@ -16,7 +15,9 @@
 		79A97AC327414CE500AA4E96 /* TableViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AC227414CE500AA4E96 /* TableViewUITestsLaunchTests.swift */; };
 		79A97AD027414D3700AA4E96 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACF27414D3700AA4E96 /* TestingAppDelegate.swift */; };
 		79A97AD227414D6700AA4E96 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD127414D6700AA4E96 /* main.swift */; };
-		79A97AD427414DCB00AA4E96 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD327414DCB00AA4E96 /* ViewControllerTests.swift */; };
+		79A97AD427414DCB00AA4E96 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD327414DCB00AA4E96 /* TableViewControllerTests.swift */; };
+		79A97AD627414E8400AA4E96 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD527414E8400AA4E96 /* TableViewController.swift */; };
+		79A97AD8274153A100AA4E96 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD7274153A100AA4E96 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		79A97A9C27414CDE00AA4E96 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A97A9F27414CDE00AA4E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79A97AA327414CDE00AA4E96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79A97AA627414CDE00AA4E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A97AA827414CE400AA4E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A97AAB27414CE400AA4E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,9 @@
 		79A97AC227414CE500AA4E96 /* TableViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79A97ACF27414D3700AA4E96 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		79A97AD127414D6700AA4E96 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		79A97AD327414DCB00AA4E96 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		79A97AD327414DCB00AA4E96 /* TableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
+		79A97AD527414E8400AA4E96 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		79A97AD7274153A100AA4E96 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				79A97A9F27414CDE00AA4E96 /* AppDelegate.swift */,
-				79A97AA327414CDE00AA4E96 /* ViewController.swift */,
 				79A97AA527414CDE00AA4E96 /* Main.storyboard */,
 				79A97AA827414CE400AA4E96 /* Assets.xcassets */,
 				79A97AAA27414CE400AA4E96 /* LaunchScreen.storyboard */,
 				79A97AAD27414CE400AA4E96 /* Info.plist */,
 				79A97AD127414D6700AA4E96 /* main.swift */,
+				79A97AD527414E8400AA4E96 /* TableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -116,7 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				79A97ACF27414D3700AA4E96 /* TestingAppDelegate.swift */,
-				79A97AD327414DCB00AA4E96 /* ViewControllerTests.swift */,
+				79A97AD327414DCB00AA4E96 /* TableViewControllerTests.swift */,
+				79A97AD7274153A100AA4E96 /* TestHelpers.swift */,
 			);
 			path = TableViewTests;
 			sourceTree = "<group>";
@@ -261,9 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A97AA427414CDE00AA4E96 /* ViewController.swift in Sources */,
 				79A97AA027414CDE00AA4E96 /* AppDelegate.swift in Sources */,
 				79A97AD227414D6700AA4E96 /* main.swift in Sources */,
+				79A97AD627414E8400AA4E96 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A97AD427414DCB00AA4E96 /* ViewControllerTests.swift in Sources */,
+				79A97AD427414DCB00AA4E96 /* TableViewControllerTests.swift in Sources */,
 				79A97AD027414D3700AA4E96 /* TestingAppDelegate.swift in Sources */,
+				79A97AD8274153A100AA4E96 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
