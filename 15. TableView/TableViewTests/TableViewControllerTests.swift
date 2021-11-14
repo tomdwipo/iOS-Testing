@@ -48,4 +48,8 @@ class TableViewControllerTests: XCTestCase {
         let cell = cellForRow(in: sut.tableView, row: 2)
         XCTAssertEqual(cell?.textLabel?.text, "Three")
     }
+    
+    func test_didSelectRow_withRow1(){
+        didSelectRow(in: sut.tableView, row: 1)
+    }
 }

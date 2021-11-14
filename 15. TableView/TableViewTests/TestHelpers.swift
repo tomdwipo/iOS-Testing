@@ -14,3 +14,7 @@ func numberOfRows(in tableView: UITableView, section: Int = 0) -> Int?{
 func cellForRow(in tableView: UITableView, row: Int = 0, section: Int = 0) -> UITableViewCell? {
     tableView.dataSource?.tableView(tableView, cellForRowAt: IndexPath(row: row, section: section))
 }
+
+func didSelectRow(in tableView: UITableView, row: Int = 0, section:Int = 0) {
+    tableView.delegate?.tableView?(tableView, didSelectRowAt: IndexPath(row: row, section: section))
+}
