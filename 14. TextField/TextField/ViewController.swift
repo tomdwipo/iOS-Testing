@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField === usernameField {
-            return !string.contains("")
+            return !string.contains(" ")
         }else{
             return true
         }

@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 
+func shouldChangeCharacters(in textField: UITextField, range: NSRange = NSRange(), replacement: String) -> Bool? {
+    textField.delegate?.textField?(textField, shouldChangeCharactersIn: range, replacementString: replacement)
+}
+
 func executeRunLoop() {
     RunLoop.current.run(until: Date())
 }
@@ -70,6 +74,8 @@ extension UIReturnKeyType: CustomStringConvertible {
             
         case .emergencyCall:
             return "emergencyCall"
+        case .continue:
+            return "continue"
         @unknown default:
             fatalError("unknown UIReturnKeyType")
         }
