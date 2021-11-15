@@ -26,7 +26,7 @@
                                 <rect key="frame" x="18" y="105" width="378" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-lf-32B">
-                                <rect key="frame" x="327" y="155" width="67" height="44"/>
+                                <rect key="frame" x="322" y="155" width="67" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jiW-vD-4mH"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TUq-3k-a8y" secondAttribute="trailing" constant="20" id="8yG-1Z-A7r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BsG-lf-32B" secondAttribute="trailing" constant="20" id="BrK-AE-pcE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BsG-lf-32B" secondAttribute="trailing" constant="25" id="BrK-AE-pcE"/>
                             <constraint firstItem="TUq-3k-a8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DTV-eV-7Kn"/>
                             <constraint firstItem="BsG-lf-32B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="20" id="Gg5-lG-SD7"/>
                             <constraint firstItem="E0X-xD-ob4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="J3y-YO-nyh"/>
