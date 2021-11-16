@@ -52,7 +52,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Title" id="ULI-1k-zWF">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="o6g-K9-HPB"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="o6g-K9-HPB">
+                                            <connections>
+                                                <action selector="cancel" destination="ekm-Re-1BQ" id="PEz-lS-p1b"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -87,6 +91,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="changePassword" destination="ekm-Re-1BQ" eventType="touchUpInside" id="e9i-RE-rbF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nYZ-zJ-25R"/>
@@ -109,6 +116,13 @@
                             <constraint firstItem="fSu-2d-Vzy" firstAttribute="leading" secondItem="nYZ-zJ-25R" secondAttribute="leading" constant="20" id="wiA-d6-yTr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="o6g-K9-HPB" id="ZGi-tO-3A7"/>
+                        <outlet property="confirmPasswordTextField" destination="3Dh-i5-od9" id="6MN-gd-Bfp"/>
+                        <outlet property="newPasswordTextField" destination="GaV-60-dta" id="y3u-G5-RFO"/>
+                        <outlet property="oldPasswordTextField" destination="fSu-2d-Vzy" id="60U-P5-RYB"/>
+                        <outlet property="submitButton" destination="LZj-RT-bha" id="n4y-rE-0TP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azz-oV-Hm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
