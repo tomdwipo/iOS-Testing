@@ -15,20 +15,20 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private(set) var submitButton: UIButton!
     
     @IBOutlet private(set) var navigationBar: UINavigationBar!
-  
+    
     lazy var passwordChanger: PasswordChanging = PasswordChanger()
     var securityToken = ""
-   
-    private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.dark))
-    private let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
-  
+    
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.dark))
+    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         submitButton.layer.borderWidth = 1
         submitButton.layer.borderColor = UIColor(red: 55/255.0, green: 147/255.0, blue: 251/255.0, alpha: 1.0).cgColor
         submitButton.layer.cornerRadius = 8
-       
+        
         blurView.translatesAutoresizingMaskIntoConstraints = false
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -139,7 +139,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
             alertController.preferredAction = okButton
             self?.present(alertController, animated: true)
         })
-
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -152,5 +152,5 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
 }
