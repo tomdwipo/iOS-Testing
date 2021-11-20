@@ -24,7 +24,7 @@ jobs:
       run: xcodebuild clean build test -project 01.AssertYourself/AssertYourself.xcodeproj -scheme "AssertYourself" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
 
     - name: Build and Test LifeCycle
-      run: xcodebuild clean build test -project 02.LifeCycle/ifeCycle.xcodeproj -scheme "ifeCycle" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+      run: xcodebuild clean build test -project 02.LifeCycle/ifeCycle.xcodeproj -scheme "LifeCycle" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
 
     - name: Build and Test CodeCoverage
       run: xcodebuild clean build test -project 03.CodeCoverage/CodeCoverage.xcodeproj -scheme "CodeCoverage" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
@@ -37,3 +37,8 @@ jobs:
 
     - name: Build and Test HardDependencies
       run: xcodebuild clean build test -project 06.HardDependencies/HardDependencies.xcodeproj -scheme "HardDependencies" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+ 
+     - name: Build and Test OutletConnections
+      run: xcodebuild clean build test -project 07.OutletConnections/OutletConnections.xcodeproj -scheme "OutletConnections" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+  
+  
