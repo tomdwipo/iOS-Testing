@@ -11,6 +11,7 @@
 		797537B12748FB3400AFB754 /* ChangePasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */; };
 		797537B32749079D00AFB754 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797537B22749079D00AFB754 /* ViewControllerPresentationSpy.xcframework */; };
 		797537B5274907AF00AFB754 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 797537B22749079D00AFB754 /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		797537B72749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797537B62749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift */; };
 		79A92FF52743F71600143332 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A92FF42743F71600143332 /* TestHelpers.swift */; };
 		79A92FF72743F9BE00143332 /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */; };
 		79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80374274297AE00D0FD25 /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		429E37907896D8CB293BFE83 /* Pods-Refactoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refactoring.release.xcconfig"; path = "Target Support Files/Pods-Refactoring/Pods-Refactoring.release.xcconfig"; sourceTree = "<group>"; };
 		797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
 		797537B22749079D00AFB754 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
+		797537B62749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		79A92FF42743F71600143332 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		79B80371274297AE00D0FD25 /* Refactoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refactoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				79A92FF42743F71600143332 /* TestHelpers.swift */,
 				79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */,
 				797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */,
+				797537B62749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift */,
 			);
 			path = RefactoringTests;
 			sourceTree = "<group>";
@@ -171,7 +174,6 @@
 				391CE4628E916C253026566C /* Pods-RefactoringTests.debug.xcconfig */,
 				A1AA8C91A13E56C8065633CC /* Pods-RefactoringTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -360,6 +362,7 @@
 				797537B12748FB3400AFB754 /* ChangePasswordViewControllerTests.swift in Sources */,
 				79A92FF52743F71600143332 /* TestHelpers.swift in Sources */,
 				79A92FF72743F9BE00143332 /* MockPasswordChanger.swift in Sources */,
+				797537B72749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
