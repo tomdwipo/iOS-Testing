@@ -55,4 +55,14 @@ final class MockPasswordChanger: PasswordChanging {
         "oldPassword: \(changeArgsOldPassword), newPassword: \(changeArgsNewPassword)"
     }
     
+    func changeCallSuccess(file: StaticString = #file, line: UInt = #line){
+        guard changeWasCalledOnce(file: file, line: line) else { return }
+        changeArgsOnSuccess.last!()
+    }
+    
+    func changeCallFailure(message: String, file: StaticString = #file, line: UInt = #line) {
+        guard changeWasCalledOnce(file:file, line: line) else { return }
+        changeArgsOnFailure.last!(message)
+    }
+    
 }

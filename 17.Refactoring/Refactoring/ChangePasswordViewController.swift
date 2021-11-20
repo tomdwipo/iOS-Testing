@@ -108,7 +108,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
             self?.activityIndicator.stopAnimating()
             self?.activityIndicator.removeFromSuperview()
             
-            let alertController = UIAlertController(title: nil, message: "Your password been successfully changed.", preferredStyle: UIAlertController.Style.alert)
+            let alertController = UIAlertController(title: nil, message: "Your password has been successfully changed.", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak self] _ in
                 self?.dismiss(animated: true)
             }
