@@ -203,7 +203,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         passwordChanger.verifyChangeNeverCalled()
     }
     
-    func test_tappingSubming_withNewPasswordTooShort_shouldShowTooShortAlert(){
+    func test_tappingSubmit_withNewPasswordTooShort_shouldShowTooShortAlert(){
         setUpEntriesNewPasswordTooShort()
         tap(sut.submitButton)
         verifyAlertPresented(message: "The new password should have at least 6 characters.")
@@ -229,6 +229,50 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     
     func test_tappingOKInTooShortAlert_shouldFocusOnNewPasswordField() throws {
         setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        putViewInHierarchy(sut)
+        try alertVerifier.executeAction(forButton: "OK")
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
+    }
+    
+    private func setUpMismatchedConfirmationEntry(){
+        sut.oldPasswordTextField.text = "NONEMPTY"
+        sut.newPasswordTextField.text = "123456"
+        sut.confirmPasswordTextField.text = "qwerty"
+    }
+    
+    func test_tappingSubmit_withConfirmationMismatch_shouldNotChangePassword(){
+        setUpMismatchedConfirmationEntry()
+        tap(sut.submitButton)
+        passwordChanger.verifyChangeNeverCalled()
+    }
+    
+    func test_tappingSubmit_withConfirmationMismatch_shouldShowMismatchAlert(){
+        setUpMismatchedConfirmationEntry()
+        tap(sut.submitButton)
+        verifyAlertPresented(message: "The new password and the confirmation password don't match. Please try again.")
+    }
+    
+    func test_tappingOKInConfirmationMismatch_shouldClearNewAndConfirmation() throws {
+        setUpMismatchedConfirmationEntry()
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        
+        XCTAssertEqual(sut.newPasswordTextField.text?.isEmpty, true , "new")
+        XCTAssertEqual(sut.confirmPasswordTextField.text?.isEmpty, true , "confirmation")
+
+    }
+    
+    func test_tappingOKInConfirmationMismatch_shouldNotClearOldPasswordField() throws {
+        setUpMismatchedConfirmationEntry()
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        
+        XCTAssertEqual(sut.oldPasswordTextField.text?.isEmpty, false)
+    }
+    
+    func test_tappingOKInConfirmationMismatch_shouldFocusOnNewPasswordField() throws {
+        setUpMismatchedConfirmationEntry()
         tap(sut.submitButton)
         putViewInHierarchy(sut)
         try alertVerifier.executeAction(forButton: "OK")
