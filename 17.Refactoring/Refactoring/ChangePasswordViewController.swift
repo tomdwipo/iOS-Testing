@@ -50,7 +50,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         }
         
         if newPasswordTextField.text?.isEmpty ?? true {
-            let alertController = UIAlertController(title: nil, message: "Please enter a new password.", preferredStyle: UIAlertController.Style.alert)
+            let alertController = UIAlertController(title: nil, message: "Please enter a New Password.", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak self] _ in
                 self?.newPasswordTextField.becomeFirstResponder()
             }
@@ -61,7 +61,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         }
         
         if newPasswordTextField.text?.count ?? 0 < 6 {
-            let alerController = UIAlertController(title: nil, message: "The new password should at least 6 characters", preferredStyle: UIAlertController.Style.alert)
+            let alerController = UIAlertController(title: nil, message: "The new password should have at least 6 characters.", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [weak self] _ in
                 self?.newPasswordTextField.text = ""
                 self?.confirmPasswordTextField.text = ""

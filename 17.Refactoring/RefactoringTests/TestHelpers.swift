@@ -38,10 +38,16 @@ func tap(_ button: UIBarButtonItem) {
     _ = button.target?.perform(button.action, with: nil)
 }
 
+func tap(_ button: UIButton) {
+    button.sendActions(for: UIControl.Event.touchUpInside)
+}
+
 func putViewInHierarchy(_ vc: UIViewController) {
     let window = UIWindow()
     window.addSubview(vc.view)
 }
+
+
 
 func executeRunLoop(){
     RunLoop.current.run(until: Date())

@@ -13,17 +13,26 @@ import ViewControllerPresentationSpy
 
 final class ChangePasswordViewControllerTests: XCTestCase {
     private var sut: ChangePasswordViewController!
+    private var passwordChanger: MockPasswordChanger!
+    private var alertVerifier: AlertVerifier!
     
     override func setUp() {
         super.setUp()
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(withIdentifier: String(describing: ChangePasswordViewController.self)) as? ChangePasswordViewController
+        
+        passwordChanger = MockPasswordChanger()
+        sut.passwordChanger = passwordChanger
+        alertVerifier = AlertVerifier()
+        
         sut.loadViewIfNeeded()
     }
     
     override func tearDown() {
         executeRunLoop()
         sut = nil
+        passwordChanger = nil
+        alertVerifier = nil
         super.tearDown()
     }
     
@@ -117,6 +126,113 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         let dismissalVerifier = DismissalVerifier()
         tap(sut.cancelBarButton)
         dismissalVerifier.verify(animated: true, dismissedViewController: sut)
+    }
+    
+    private func setUpValidPasswordEntries(){
+        sut.oldPasswordTextField.text = "NONEMPTY"
+        sut.newPasswordTextField.text = "123456"
+        sut.confirmPasswordTextField.text = sut.newPasswordTextField.text
+    }
+    
+    func test_tappingSubmit_withOldPasswordEmpty_shouldNotChangePassword(){
+        setUpValidPasswordEntries()
+        sut.oldPasswordTextField.text = ""
+        
+        tap(sut.submitButton)
+        
+        passwordChanger.verifyChangeNeverCalled()
+    }
+    
+    func test_tappingSubmit_withOldPasswordEmpty_shouldPutFocusOnOldPassword(){
+        setUpValidPasswordEntries()
+        sut.oldPasswordTextField.text = ""
+        
+        putViewInHierarchy(sut)
+        
+        tap(sut.submitButton)
+        
+        XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder)
+    }
+    
+    private func verifyAlertPresented(message: String, file: StaticString = #file, line: UInt = #line) {
+        alertVerifier.verify(title: nil, message: message, animated: true, actions: [AlertVerifier.Action.default("OK")], presentingViewController: sut, file: file, line: line)
+        XCTAssertEqual(alertVerifier.preferredAction?.title, "OK", "preferred action", file:file, line: line)
+    }
+    
+    func test_tappingSubmit_withNewPasswordEmpty_shouldNotChangePassword(){
+        setUpValidPasswordEntries()
+        sut.newPasswordTextField.text = ""
+        
+        putViewInHierarchy(sut)
+        
+        tap(sut.submitButton)
+        
+        passwordChanger.verifyChangeNeverCalled()
+    }
+    
+    func test_tappingSubmit_withNewPasswordEmpty_shouldShowPasswordBlankAlert(){
+        setUpValidPasswordEntries()
+        sut.newPasswordTextField.text = ""
+        
+        putViewInHierarchy(sut)
+        
+        tap(sut.submitButton)
+        
+        verifyAlertPresented(message: "Please enter a New Password.")
+    }
+    
+    func test_tappingOKPasswordAlert_shouldFocusOnNewPassword() throws {
+        setUpValidPasswordEntries()
+        sut.newPasswordTextField.text = ""
+        tap(sut.submitButton)
+        putViewInHierarchy(sut)
+        try alertVerifier.executeAction(forButton: "OK")
+        
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
+    }
+    
+    private func setUpEntriesNewPasswordTooShort(){
+        sut.oldPasswordTextField.text = "NONEMPTY"
+        sut.newPasswordTextField.text = "12345"
+        sut.confirmPasswordTextField.text = sut.newPasswordTextField.text
+    }
+    
+    func test_tappingSubmit_withNewPasswordTooShort_shouldNotChangePassword(){
+        setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        passwordChanger.verifyChangeNeverCalled()
+    }
+    
+    func test_tappingSubming_withNewPasswordTooShort_shouldShowTooShortAlert(){
+        setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        verifyAlertPresented(message: "The new password should have at least 6 characters.")
+    }
+    
+    func test_tappingOKInTooShortAlert_shouldClearNewAndConfirmation() throws {
+        setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        
+        XCTAssertEqual(sut.newPasswordTextField.text?.isEmpty, true , "new")
+        XCTAssertEqual(sut.confirmPasswordTextField.text?.isEmpty, true , "confirmation")
+
+    }
+    
+    func test_tappingOKInTooShortAlert_shouldNotClearOldPasswordField() throws {
+        setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        
+        XCTAssertEqual(sut.oldPasswordTextField.text?.isEmpty, false)
+    }
+    
+    func test_tappingOKInTooShortAlert_shouldFocusOnNewPasswordField() throws {
+        setUpEntriesNewPasswordTooShort()
+        tap(sut.submitButton)
+        putViewInHierarchy(sut)
+        try alertVerifier.executeAction(forButton: "OK")
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
     }
 }
 
