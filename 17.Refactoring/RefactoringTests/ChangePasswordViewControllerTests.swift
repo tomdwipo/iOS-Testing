@@ -8,6 +8,8 @@
 import Foundation
 @testable import Refactoring
 import XCTest
+import ViewControllerPresentationSpy
+
 
 final class ChangePasswordViewControllerTests: XCTestCase {
     private var sut: ChangePasswordViewController!
@@ -20,6 +22,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
+        executeRunLoop()
         sut = nil
         super.tearDown()
     }
@@ -76,6 +79,44 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertEqual(textfield.textContentType, .newPassword, "textContentType")
         XCTAssertTrue(textfield.isSecureTextEntry, "isSecureTextEntry")
         XCTAssertTrue(textfield.enablesReturnKeyAutomatically, "enablesReturnKeyAutomatically")
+    }
+    
+    private func putFocusOn(textField: UITextField) {
+        putViewInHierarchy(sut)
+        textField.becomeFirstResponder()
+    }
+    
+    func test_tappingCancel_withFocusOnOldPassword_shouldResignThatFocus(){
+        putFocusOn(textField: sut.oldPasswordTextField)
+        XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
+        
+        tap(sut.cancelBarButton)
+        
+        XCTAssertFalse(sut.oldPasswordTextField.isFirstResponder)
+    }
+    
+    func test_tappingCancel_withFocusOnNewPassword_shouldResignThatFocus(){
+        putFocusOn(textField: sut.newPasswordTextField)
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
+        
+        tap(sut.cancelBarButton)
+        
+        XCTAssertFalse(sut.newPasswordTextField.isFirstResponder)
+    }
+    
+    func test_tappingCancel_withFocusOnConfirmPassword_shouldResignThatFocus(){
+        putFocusOn(textField: sut.confirmPasswordTextField)
+        XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder)
+        
+        tap(sut.cancelBarButton)
+        
+        XCTAssertFalse(sut.confirmPasswordTextField.isFirstResponder)
+    }
+    
+    func test_tappingCancel_shouldDismissModal(){
+        let dismissalVerifier = DismissalVerifier()
+        tap(sut.cancelBarButton)
+        dismissalVerifier.verify(animated: true, dismissedViewController: sut)
     }
 }
 

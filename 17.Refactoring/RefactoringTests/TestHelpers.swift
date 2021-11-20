@@ -34,6 +34,19 @@ func systemItem(for barButtonItem: UIBarButtonItem) -> UIBarButtonItem.SystemIte
     return UIBarButtonItem.SystemItem(rawValue: systemItemNumber)!
 }
 
+func tap(_ button: UIBarButtonItem) {
+    _ = button.target?.perform(button.action, with: nil)
+}
+
+func putViewInHierarchy(_ vc: UIViewController) {
+    let window = UIWindow()
+    window.addSubview(vc.view)
+}
+
+func executeRunLoop(){
+    RunLoop.current.run(until: Date())
+}
+
 extension UIBarButtonItem.SystemItem: CustomStringConvertible {
     public var description: String {
         switch self {
@@ -93,5 +106,6 @@ extension UIBarButtonItem.SystemItem: CustomStringConvertible {
         }
     }
     
+ 
     
 }
