@@ -51,7 +51,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKs-li-MMV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Title" id="ULI-1k-zWF">
+                                    <navigationItem title="Change Password" id="ULI-1k-zWF">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="o6g-K9-HPB">
                                             <connections>
                                                 <action selector="cancel" destination="ekm-Re-1BQ" id="PEz-lS-p1b"/>
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="cancelBarButton" destination="o6g-K9-HPB" id="ZGi-tO-3A7"/>
                         <outlet property="confirmPasswordTextField" destination="3Dh-i5-od9" id="6MN-gd-Bfp"/>
+                        <outlet property="navigationBar" destination="BKs-li-MMV" id="D81-8s-qxs"/>
                         <outlet property="newPasswordTextField" destination="GaV-60-dta" id="y3u-G5-RFO"/>
                         <outlet property="oldPasswordTextField" destination="fSu-2d-Vzy" id="60U-P5-RYB"/>
                         <outlet property="submitButton" destination="LZj-RT-bha" id="n4y-rE-0TP"/>

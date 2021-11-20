@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		797537B12748FB3400AFB754 /* ChangePasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */; };
 		79A92FF52743F71600143332 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A92FF42743F71600143332 /* TestHelpers.swift */; };
 		79A92FF72743F9BE00143332 /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */; };
 		79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80374274297AE00D0FD25 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
 		79A92FF42743F71600143332 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		79B80371274297AE00D0FD25 /* Refactoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refactoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				79B803A4274297DA00D0FD25 /* TestingAppDelegate.swift */,
 				79A92FF42743F71600143332 /* TestHelpers.swift */,
 				79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */,
+				797537B02748FB3400AFB754 /* ChangePasswordViewControllerTests.swift */,
 			);
 			path = RefactoringTests;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B803A5274297DA00D0FD25 /* TestingAppDelegate.swift in Sources */,
+				797537B12748FB3400AFB754 /* ChangePasswordViewControllerTests.swift in Sources */,
 				79A92FF52743F71600143332 /* TestHelpers.swift in Sources */,
 				79A92FF72743F9BE00143332 /* MockPasswordChanger.swift in Sources */,
 			);
