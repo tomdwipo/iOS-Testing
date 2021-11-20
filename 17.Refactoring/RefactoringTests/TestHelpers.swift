@@ -48,9 +48,12 @@ func putViewInHierarchy(_ vc: UIViewController) {
 }
 
 
-
 func executeRunLoop(){
     RunLoop.current.run(until: Date())
+}
+
+@discardableResult func shouldReturn(in textField: UITextField) -> Bool? {
+    textField.delegate?.textFieldShouldReturn?(textField)
 }
 
 extension UIBarButtonItem.SystemItem: CustomStringConvertible {
