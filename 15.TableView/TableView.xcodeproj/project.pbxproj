@@ -11,8 +11,6 @@
 		79A97AA727414CDE00AA4E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AA527414CDE00AA4E96 /* Main.storyboard */; };
 		79A97AA927414CE400AA4E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AA827414CE400AA4E96 /* Assets.xcassets */; };
 		79A97AAC27414CE400AA4E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A97AAA27414CE400AA4E96 /* LaunchScreen.storyboard */; };
-		79A97AC127414CE500AA4E96 /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AC027414CE500AA4E96 /* TableViewUITests.swift */; };
-		79A97AC327414CE500AA4E96 /* TableViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AC227414CE500AA4E96 /* TableViewUITestsLaunchTests.swift */; };
 		79A97AD027414D3700AA4E96 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACF27414D3700AA4E96 /* TestingAppDelegate.swift */; };
 		79A97AD227414D6700AA4E96 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD127414D6700AA4E96 /* main.swift */; };
 		79A97AD427414DCB00AA4E96 /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD327414DCB00AA4E96 /* TableViewControllerTests.swift */; };
@@ -22,13 +20,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		79A97AB327414CE500AA4E96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 79A97A9427414CDE00AA4E96 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79A97A9B27414CDE00AA4E96;
-			remoteInfo = TableView;
-		};
-		79A97ABD27414CE500AA4E96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79A97A9427414CDE00AA4E96 /* Project object */;
 			proxyType = 1;
@@ -45,7 +36,6 @@
 		79A97AAB27414CE400AA4E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79A97AAD27414CE400AA4E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79A97AB227414CE500AA4E96 /* TableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79A97ABC27414CE500AA4E96 /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A97AC027414CE500AA4E96 /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		79A97AC227414CE500AA4E96 /* TableViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79A97ACF27414D3700AA4E96 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
@@ -70,13 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79A97AB927414CE500AA4E96 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +78,6 @@
 			children = (
 				79A97A9C27414CDE00AA4E96 /* TableView.app */,
 				79A97AB227414CE500AA4E96 /* TableViewTests.xctest */,
-				79A97ABC27414CE500AA4E96 /* TableViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,24 +153,6 @@
 			productReference = 79A97AB227414CE500AA4E96 /* TableViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		79A97ABB27414CE500AA4E96 /* TableViewUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79A97ACC27414CE500AA4E96 /* Build configuration list for PBXNativeTarget "TableViewUITests" */;
-			buildPhases = (
-				79A97AB827414CE500AA4E96 /* Sources */,
-				79A97AB927414CE500AA4E96 /* Frameworks */,
-				79A97ABA27414CE500AA4E96 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				79A97ABE27414CE500AA4E96 /* PBXTargetDependency */,
-			);
-			name = TableViewUITests;
-			productName = TableViewUITests;
-			productReference = 79A97ABC27414CE500AA4E96 /* TableViewUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,10 +167,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					79A97AB127414CE500AA4E96 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 79A97A9B27414CDE00AA4E96;
-					};
-					79A97ABB27414CE500AA4E96 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 79A97A9B27414CDE00AA4E96;
 					};
@@ -227,7 +187,6 @@
 			targets = (
 				79A97A9B27414CDE00AA4E96 /* TableView */,
 				79A97AB127414CE500AA4E96 /* TableViewTests */,
-				79A97ABB27414CE500AA4E96 /* TableViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +203,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		79A97AB027414CE500AA4E96 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79A97ABA27414CE500AA4E96 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,15 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79A97AB827414CE500AA4E96 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				79A97AC327414CE500AA4E96 /* TableViewUITestsLaunchTests.swift in Sources */,
-				79A97AC127414CE500AA4E96 /* TableViewUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,11 +239,6 @@
 			isa = PBXTargetDependency;
 			target = 79A97A9B27414CDE00AA4E96 /* TableView */;
 			targetProxy = 79A97AB327414CE500AA4E96 /* PBXContainerItemProxy */;
-		};
-		79A97ABE27414CE500AA4E96 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 79A97A9B27414CDE00AA4E96 /* TableView */;
-			targetProxy = 79A97ABD27414CE500AA4E96 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,50 +480,6 @@
 			};
 			name = Release;
 		};
-		79A97ACD27414CE500AA4E96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.TableViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TableView;
-			};
-			name = Debug;
-		};
-		79A97ACE27414CE500AA4E96 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.TableViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TableView;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -612,15 +506,6 @@
 			buildConfigurations = (
 				79A97ACA27414CE500AA4E96 /* Debug */,
 				79A97ACB27414CE500AA4E96 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79A97ACC27414CE500AA4E96 /* Build configuration list for PBXNativeTarget "TableViewUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79A97ACD27414CE500AA4E96 /* Debug */,
-				79A97ACE27414CE500AA4E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,7 +9,7 @@ import XCTest
 @testable import Alert
 
 class AlertTests: XCTestCase {
-    func test_zero(){
-        XCTFail("Tests not yet implemented AlertTests")
-    }
+//    func test_zero(){
+//        XCTFail("Tests not yet implemented AlertTests")
+//    }
 }
