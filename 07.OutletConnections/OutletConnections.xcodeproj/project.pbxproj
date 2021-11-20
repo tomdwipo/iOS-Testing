@@ -12,8 +12,6 @@
 		794E043F273A44F7009A6A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794E043D273A44F7009A6A7C /* Main.storyboard */; };
 		794E0441273A44FA009A6A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794E0440273A44FA009A6A7C /* Assets.xcassets */; };
 		794E0444273A44FA009A6A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794E0442273A44FA009A6A7C /* LaunchScreen.storyboard */; };
-		794E0459273A44FB009A6A7C /* OutletConnectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E0458273A44FB009A6A7C /* OutletConnectionsUITests.swift */; };
-		794E045B273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E045A273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift */; };
 		794E0468273A4562009A6A7C /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E0467273A4562009A6A7C /* TestingAppDelegate.swift */; };
 		794E046A273A459B009A6A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E0469273A459B009A6A7C /* main.swift */; };
 		794E046D273A4790009A6A7C /* OutletConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E046B273A4790009A6A7C /* OutletConnectionsViewController.swift */; };
@@ -23,13 +21,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		794E044B273A44FB009A6A7C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 794E042C273A44F7009A6A7C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 794E0433273A44F7009A6A7C;
-			remoteInfo = OutletConnections;
-		};
-		794E0455273A44FB009A6A7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 794E042C273A44F7009A6A7C /* Project object */;
 			proxyType = 1;
@@ -47,7 +38,6 @@
 		794E0443273A44FA009A6A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		794E0445273A44FA009A6A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		794E044A273A44FB009A6A7C /* OutletConnectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletConnectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		794E0454273A44FB009A6A7C /* OutletConnectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletConnectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		794E0458273A44FB009A6A7C /* OutletConnectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsUITests.swift; sourceTree = "<group>"; };
 		794E045A273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		794E0467273A4562009A6A7C /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
@@ -72,13 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		794E0451273A44FB009A6A7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,7 +80,6 @@
 			children = (
 				794E0434273A44F7009A6A7C /* OutletConnections.app */,
 				794E044A273A44FB009A6A7C /* OutletConnectionsTests.xctest */,
-				794E0454273A44FB009A6A7C /* OutletConnectionsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,24 +156,6 @@
 			productReference = 794E044A273A44FB009A6A7C /* OutletConnectionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		794E0453273A44FB009A6A7C /* OutletConnectionsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 794E0464273A44FB009A6A7C /* Build configuration list for PBXNativeTarget "OutletConnectionsUITests" */;
-			buildPhases = (
-				794E0450273A44FB009A6A7C /* Sources */,
-				794E0451273A44FB009A6A7C /* Frameworks */,
-				794E0452273A44FB009A6A7C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				794E0456273A44FB009A6A7C /* PBXTargetDependency */,
-			);
-			name = OutletConnectionsUITests;
-			productName = OutletConnectionsUITests;
-			productReference = 794E0454273A44FB009A6A7C /* OutletConnectionsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,10 +170,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					794E0449273A44FB009A6A7C = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 794E0433273A44F7009A6A7C;
-					};
-					794E0453273A44FB009A6A7C = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 794E0433273A44F7009A6A7C;
 					};
@@ -230,7 +190,6 @@
 			targets = (
 				794E0433273A44F7009A6A7C /* OutletConnections */,
 				794E0449273A44FB009A6A7C /* OutletConnectionsTests */,
-				794E0453273A44FB009A6A7C /* OutletConnectionsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +207,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		794E0448273A44FB009A6A7C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		794E0452273A44FB009A6A7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,15 +236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		794E0450273A44FB009A6A7C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				794E0459273A44FB009A6A7C /* OutletConnectionsUITests.swift in Sources */,
-				794E045B273A44FB009A6A7C /* OutletConnectionsUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -300,11 +243,6 @@
 			isa = PBXTargetDependency;
 			target = 794E0433273A44F7009A6A7C /* OutletConnections */;
 			targetProxy = 794E044B273A44FB009A6A7C /* PBXContainerItemProxy */;
-		};
-		794E0456273A44FB009A6A7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 794E0433273A44F7009A6A7C /* OutletConnections */;
-			targetProxy = 794E0455273A44FB009A6A7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,50 +484,6 @@
 			};
 			name = Release;
 		};
-		794E0465273A44FB009A6A7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.OutletConnectionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OutletConnections;
-			};
-			name = Debug;
-		};
-		794E0466273A44FB009A6A7C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.OutletConnectionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = OutletConnections;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,15 +510,6 @@
 			buildConfigurations = (
 				794E0462273A44FB009A6A7C /* Debug */,
 				794E0463273A44FB009A6A7C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		794E0464273A44FB009A6A7C /* Build configuration list for PBXNativeTarget "OutletConnectionsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				794E0465273A44FB009A6A7C /* Debug */,
-				794E0466273A44FB009A6A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

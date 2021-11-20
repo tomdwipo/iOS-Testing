@@ -13,8 +13,6 @@
 		7937380A273819B100C3F060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79373809273819B100C3F060 /* Assets.xcassets */; };
 		7937380D273819B100C3F060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7937380B273819B100C3F060 /* LaunchScreen.storyboard */; };
 		79373818273819B100C3F060 /* LoadViewControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373817273819B100C3F060 /* LoadViewControllersTests.swift */; };
-		79373822273819B100C3F060 /* LoadViewControllersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373821273819B100C3F060 /* LoadViewControllersUITests.swift */; };
-		79373824273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373823273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift */; };
 		7937383127381AE800C3F060 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383027381AE800C3F060 /* TestingAppDelegate.swift */; };
 		7937383327381B7C00C3F060 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383227381B7C00C3F060 /* main.swift */; };
 		7937383527381D1400C3F060 /* StoryboardBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937383427381D1400C3F060 /* StoryboardBasedViewController.swift */; };
@@ -34,13 +32,6 @@
 			remoteGlobalIDString = 793737FC273819AE00C3F060;
 			remoteInfo = LoadViewControllers;
 		};
-		7937381E273819B100C3F060 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 793737F5273819AE00C3F060 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 793737FC273819AE00C3F060;
-			remoteInfo = LoadViewControllers;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +44,6 @@
 		7937380E273819B100C3F060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79373813273819B100C3F060 /* LoadViewControllersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadViewControllersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79373817273819B100C3F060 /* LoadViewControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersTests.swift; sourceTree = "<group>"; };
-		7937381D273819B100C3F060 /* LoadViewControllersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadViewControllersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79373821273819B100C3F060 /* LoadViewControllersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersUITests.swift; sourceTree = "<group>"; };
 		79373823273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7937383027381AE800C3F060 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
@@ -82,13 +72,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7937381A273819B100C3F060 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,7 +90,6 @@
 			children = (
 				793737FD273819AE00C3F060 /* LoadViewControllers.app */,
 				79373813273819B100C3F060 /* LoadViewControllersTests.xctest */,
-				7937381D273819B100C3F060 /* LoadViewControllersUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,24 +171,6 @@
 			productReference = 79373813273819B100C3F060 /* LoadViewControllersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7937381C273819B100C3F060 /* LoadViewControllersUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7937382D273819B100C3F060 /* Build configuration list for PBXNativeTarget "LoadViewControllersUITests" */;
-			buildPhases = (
-				79373819273819B100C3F060 /* Sources */,
-				7937381A273819B100C3F060 /* Frameworks */,
-				7937381B273819B100C3F060 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7937381F273819B100C3F060 /* PBXTargetDependency */,
-			);
-			name = LoadViewControllersUITests;
-			productName = LoadViewControllersUITests;
-			productReference = 7937381D273819B100C3F060 /* LoadViewControllersUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,10 +185,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					79373812273819B100C3F060 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 793737FC273819AE00C3F060;
-					};
-					7937381C273819B100C3F060 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 793737FC273819AE00C3F060;
 					};
@@ -245,7 +205,6 @@
 			targets = (
 				793737FC273819AE00C3F060 /* LoadViewControllers */,
 				79373812273819B100C3F060 /* LoadViewControllersTests */,
-				7937381C273819B100C3F060 /* LoadViewControllersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,13 +222,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		79373811273819B100C3F060 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7937381B273819B100C3F060 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,15 +256,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79373819273819B100C3F060 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				79373822273819B100C3F060 /* LoadViewControllersUITests.swift in Sources */,
-				79373824273819B100C3F060 /* LoadViewControllersUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -320,11 +263,6 @@
 			isa = PBXTargetDependency;
 			target = 793737FC273819AE00C3F060 /* LoadViewControllers */;
 			targetProxy = 79373814273819B100C3F060 /* PBXContainerItemProxy */;
-		};
-		7937381F273819B100C3F060 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 793737FC273819AE00C3F060 /* LoadViewControllers */;
-			targetProxy = 7937381E273819B100C3F060 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,50 +504,6 @@
 			};
 			name = Release;
 		};
-		7937382E273819B100C3F060 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.LoadViewControllersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LoadViewControllers;
-			};
-			name = Debug;
-		};
-		7937382F273819B100C3F060 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tommyputranto.com.LoadViewControllersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LoadViewControllers;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -636,15 +530,6 @@
 			buildConfigurations = (
 				7937382B273819B100C3F060 /* Debug */,
 				7937382C273819B100C3F060 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7937382D273819B100C3F060 /* Build configuration list for PBXNativeTarget "LoadViewControllersUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7937382E273819B100C3F060 /* Debug */,
-				7937382F273819B100C3F060 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
