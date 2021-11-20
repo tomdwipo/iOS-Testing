@@ -1,0 +1,6 @@
+framework module Pods_Refactoring {
+  umbrella header "Pods-Refactoring-umbrella.h"
+
+  export *
+  module * { export * }
+}
