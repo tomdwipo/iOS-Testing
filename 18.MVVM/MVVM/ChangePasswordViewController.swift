@@ -64,8 +64,8 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction private func changePassword(){
+        updateViewModelToTextFields()
         guard validateInputs() else { return }
-        
         setUpWaitingAppearance()
         attemptToChangePassword()
         
@@ -73,25 +73,26 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     
     
     private func validateInputs() -> Bool {
-        if oldPasswordTextField.text?.isEmpty ?? true {
-            oldPasswordTextField.becomeFirstResponder()
+        if viewModel.isOldPasswordIsEmpty {
+            viewModel.inputFocus = .oldPassword
             return false
         }
         
-        if newPasswordTextField.text?.isEmpty ?? true {
-            showAlert(message: viewModel.enterNewPasswordTooShortMessage) { [weak self] _ in self?.newPasswordTextField.becomeFirstResponder()
+        if viewModel.isNewPasswordIsEmpty {
+            showAlert(message: viewModel.enterNewPasswordTooShortMessage) { [weak self] _ in
+                self?.viewModel.inputFocus = .newPassword
             }
             return false
         }
         
-        if newPasswordTextField.text?.count ?? 0 < 6 {
+        if viewModel.isNewPasswordTooShort {
             showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] _ in
                 self?.resetNewPasswords()
             }
             return false
         }
         
-        if newPasswordTextField.text != confirmPasswordTextField.text {
+        if viewModel.isConfirmPasswordMismatched {
             showAlert(message: viewModel.confirmationPasswordDoesNotMatchMessage) {[weak self] _ in
                 self?.resetNewPasswords()
             }
@@ -103,9 +104,9 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     private func resetNewPasswords(){
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
-        newPasswordTextField.becomeFirstResponder()
+        viewModel.inputFocus = .newPassword
     }
-
+    
     
     private func setUpWaitingAppearance() {
         viewModel.inputFocus = .noKeyboard
@@ -115,7 +116,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func attemptToChangePassword() {
-        passwordChanger.change(securityToken: securityToken, oldPassword: oldPasswordTextField.text ?? "", newPassword: newPasswordTextField.text ?? "", onSuccess: { [weak self] in
+        passwordChanger.change(securityToken: securityToken, oldPassword: viewModel.oldPassword, newPassword: viewModel.newPassword, onSuccess: { [weak self] in
             self?.handleSuccess()
         }, onFailure: { [weak self] message in
             self?.handleFailure(message: message)
@@ -145,20 +146,26 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         self.present(alertController, animated: true)
     }
     
-    private func hideSpinner(){
-        activityIndicator.stopAnimating()
-        activityIndicator.removeFromSuperview()
-    }
+    
     
     private func startOver(){
         oldPasswordTextField.text = ""
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
         
-        oldPasswordTextField.becomeFirstResponder()
+        viewModel.inputFocus = .oldPassword
         viewModel.isBlurViewShowing = false
         viewModel.isCancelButtonIsEnable = true
         
+    }
+    
+    
+}
+
+extension ChangePasswordViewController {
+    private func hideSpinner(){
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
     }
     
     private func setLabels(){
@@ -207,6 +214,12 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         }else{
             hideSpinner()
         }
+    }
+    
+    private func updateViewModelToTextFields(){
+        viewModel.oldPassword = oldPasswordTextField.text ?? ""
+        viewModel.newPassword = newPasswordTextField.text ?? ""
+        viewModel.confirmPassword = confirmPasswordTextField.text ?? ""
     }
 }
 

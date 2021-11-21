@@ -32,6 +32,15 @@ struct ChangePasswordViewModel {
     
     var isBlurViewShowing = false
     var isActivityIndicatorShowing = false
+    
+    var oldPassword = ""
+    var newPassword = ""
+    var confirmPassword = ""
+    
+    var isOldPasswordIsEmpty: Bool { oldPassword.isEmpty }
+    var isNewPasswordIsEmpty: Bool { newPassword.isEmpty }
+    var isNewPasswordTooShort: Bool { newPassword.count < 6 }
+    var isConfirmPasswordMismatched: Bool { newPassword != confirmPassword }
 }
 
 
