@@ -2,7 +2,7 @@ name: Swift
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
     branches: [ master ]
 
@@ -40,3 +40,18 @@ jobs:
 
     - name: Build and Test OutletConnections
       run: xcodebuild clean build test -project 07.OutletConnections/OutletConnections.xcodeproj -scheme "OutletConnections" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test ButtonTap
+      run: xcodebuild clean build test -project 08.ButtonTap/ButtonTap.xcodeproj -scheme "ButtonTap" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test Alert
+      run: xcodebuild clean build test -project 09.Alert/Alert.xcodeproj -scheme "Alert" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test Navigation
+      run: xcodebuild clean build test -project 10.Navigation/Navigation.xcodeproj -scheme "Navigation" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test UserDefaults
+      run: xcodebuild clean build test -project 11.UserDefaults/UserDefaults.xcodeproj -scheme "UserDefaults" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test NetworkRequest
+      run: xcodebuild clean build test -project 12.NetworkRequest/NetworkRequest.xcodeproj -scheme "NetworkRequest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
