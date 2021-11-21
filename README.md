@@ -1,2 +1,2 @@
 # iOS-Testing
-Testing fundamental for iOS
+iOS Testing fundamental for Learning
