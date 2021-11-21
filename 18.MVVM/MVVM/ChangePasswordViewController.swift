@@ -22,6 +22,18 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
             if oldValue.isCancelButtonIsEnable != viewModel.isCancelButtonIsEnable {
                 cancelBarButton.isEnabled = viewModel.isCancelButtonIsEnable
             }
+            
+            if oldValue.inputFocus != viewModel.inputFocus {
+                updateInputFocus()
+            }
+            
+            if oldValue.isBlurViewShowing != viewModel.isBlurViewShowing {
+                updateBlurView()
+            }
+            
+            if oldValue.isActivityIndicatorShowing != viewModel.isActivityIndicatorShowing {
+                updateActivityIndicator()
+            }
         }
     }
     
@@ -46,7 +58,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func cancel(){
-        view.endEditing(true)
+        viewModel.inputFocus = .noKeyboard
         dismiss(animated: true)
     }
     
@@ -96,19 +108,10 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
     
     private func setUpWaitingAppearance() {
-        view.endEditing(true)
+        viewModel.inputFocus = .noKeyboard
         viewModel.isCancelButtonIsEnable = false
-        view.backgroundColor = .clear
-        view.addSubview(blurView)
-        view.addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        ])
-        activityIndicator.startAnimating()
+        viewModel.isBlurViewShowing = true
+        viewModel.isActivityIndicatorShowing = true
     }
     
     private func attemptToChangePassword() {
@@ -120,14 +123,14 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func handleSuccess(){
-        hideSpinner()
+        viewModel.isActivityIndicatorShowing = false
         showAlert(message: viewModel.successMessage, okAction: { [weak self] _ in
             self?.dismiss(animated: true)
         })
     }
     
     private func handleFailure(message: String){
-        hideSpinner()
+        viewModel.isActivityIndicatorShowing = false
         showAlert(message: message, okAction: { [weak self] _ in
             self?.startOver()
             
@@ -153,10 +156,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         confirmPasswordTextField.text = ""
         
         oldPasswordTextField.becomeFirstResponder()
-        view.backgroundColor = .white
-        
-        blurView.removeFromSuperview()
-        
+        viewModel.isBlurViewShowing = false
         viewModel.isCancelButtonIsEnable = true
         
     }
@@ -168,15 +168,55 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         confirmPasswordTextField.placeholder = viewModel.confirmPasswordPlaceholder
         submitButton.setTitle(viewModel.submitButtonLabel, for: UIControl.State.normal)
     }
+    
+    private func updateInputFocus(){
+        switch viewModel.inputFocus {
+        case .noKeyboard:
+            view.endEditing(true)
+        case .oldPassword:
+            oldPasswordTextField.becomeFirstResponder()
+        case .newPassword:
+            newPasswordTextField.becomeFirstResponder()
+        case .confirmPassword:
+            confirmPasswordTextField.becomeFirstResponder()
+        }
+    }
+    
+    private func updateBlurView(){
+        if viewModel.isBlurViewShowing {
+            view.backgroundColor = .clear
+            view.addSubview(blurView)
+            NSLayoutConstraint.activate([
+                blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
+                blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            ])
+        }else {
+            view.backgroundColor = .white
+            blurView.removeFromSuperview()
+        }
+    }
+    
+    private func updateActivityIndicator(){
+        if viewModel.isActivityIndicatorShowing {
+            view.addSubview(activityIndicator)
+            NSLayoutConstraint.activate([
+                activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ])
+            activityIndicator.startAnimating()
+        }else{
+            hideSpinner()
+        }
+    }
 }
 
 
 extension ChangePasswordViewController: UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === oldPasswordTextField {
-            newPasswordTextField.becomeFirstResponder()
+            viewModel.inputFocus = .newPassword
         }else if (textField === newPasswordTextField) {
-            confirmPasswordTextField.becomeFirstResponder()
+            viewModel.inputFocus = .confirmPassword
         }else if (textField === confirmPasswordTextField) {
             changePassword()
         }
