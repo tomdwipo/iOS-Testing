@@ -15,6 +15,7 @@
 		7989DF83274A2CDB007C7811 /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */; };
 		7989DF84274A2CDB007C7811 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797537B62749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift */; };
 		7989DF86274A2CF5007C7811 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 797537B22749079D00AFB754 /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7989DF88274A2EAC007C7811 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */; };
 		79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80374274297AE00D0FD25 /* AppDelegate.swift */; };
 		79B80379274297AE00D0FD25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80378274297AE00D0FD25 /* ViewController.swift */; };
 		79B8037C274297AE00D0FD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B8037A274297AE00D0FD25 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		797537B62749216300AFB754 /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		7989DF77274A2C6A007C7811 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7989DF79274A2C6A007C7811 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
+		7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		79A92FF42743F71600143332 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		79A92FF62743F9BE00143332 /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		79B80371274297AE00D0FD25 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				79B803A62742983E00D0FD25 /* main.swift */,
 				79B803A827429B8F00D0FD25 /* PasswordChanger.swift */,
 				79B803AA27429E4600D0FD25 /* ChangePasswordViewController.swift */,
+				7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B80379274297AE00D0FD25 /* ViewController.swift in Sources */,
+				7989DF88274A2EAC007C7811 /* ChangePasswordViewModel.swift in Sources */,
 				79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */,
 				79B803A72742983E00D0FD25 /* main.swift in Sources */,
 				79B803AB27429E4600D0FD25 /* ChangePasswordViewController.swift in Sources */,

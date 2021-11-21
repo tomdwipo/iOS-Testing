@@ -20,7 +20,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         super.setUp()
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(withIdentifier: String(describing: ChangePasswordViewController.self)) as? ChangePasswordViewController
-        
+        sut.viewModel = ChangePasswordViewModel(okButtonLabel: "OK", enterNewPasswordTooShortMessage: "Please enter a New Password.", newPasswordTooShortMessage: "The new password should have at least 6 characters.", confirmationPasswordDoesNotMatchMessage: "The new password and the confirmation password don't match. Please try again.", successMessage: "Your password has been successfully changed.", title: "Change Password", oldPasswordPlaceholder: "Current Password", newPasswordPlaceholder: "New Password", confirmPasswordPlaceholder: "Confirm New Password", submitButtonLabel: "Submit")
         passwordChanger = MockPasswordChanger()
         sut.passwordChanger = passwordChanger
         alertVerifier = AlertVerifier()
