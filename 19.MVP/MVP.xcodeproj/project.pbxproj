@@ -27,6 +27,8 @@
 		79DF0D77274BCA9C0095CFC3 /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D6F274BCA9C0095CFC3 /* MockPasswordChanger.swift */; };
 		79DF0D78274BCA9C0095CFC3 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D70274BCA9C0095CFC3 /* MVVMTests.swift */; };
 		79DF0D7A274BCAD90095CFC3 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DF0D6B274BCA9C0095CFC3 /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		79DF0D7C274BCBC70095CFC3 /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */; };
+		79DF0D7E274BCC360095CFC3 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		79DF0D6E274BCA9C0095CFC3 /* MVPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVPTests.swift; sourceTree = "<group>"; };
 		79DF0D6F274BCA9C0095CFC3 /* MockPasswordChanger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		79DF0D70274BCA9C0095CFC3 /* MVVMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
+		79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
+		79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		A1AA8C91A13E56C8065633CC /* Pods-RefactoringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RefactoringTests.release.xcconfig"; path = "Target Support Files/Pods-RefactoringTests/Pods-RefactoringTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEA6D0A472A76502623FDEA3 /* Pods-MVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPTests.debug.xcconfig"; path = "Target Support Files/Pods-MVPTests/Pods-MVPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFAFC6C3765EE4AFFD75C305 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		79B80373274297AE00D0FD25 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				79DF0D7F274BD75C0095CFC3 /* Refactoring */,
 				79B80374274297AE00D0FD25 /* AppDelegate.swift */,
 				79B80378274297AE00D0FD25 /* ViewController.swift */,
 				79B8037A274297AE00D0FD25 /* Main.storyboard */,
@@ -141,7 +146,6 @@
 				79B80382274297B100D0FD25 /* Info.plist */,
 				79B803A62742983E00D0FD25 /* main.swift */,
 				79B803A827429B8F00D0FD25 /* PasswordChanger.swift */,
-				79B803AA27429E4600D0FD25 /* ChangePasswordViewController.swift */,
 				7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */,
 			);
 			path = MVP;
@@ -160,6 +164,16 @@
 				79DF0D6B274BCA9C0095CFC3 /* ViewControllerPresentationSpy.xcframework */,
 			);
 			path = MVPTests;
+			sourceTree = "<group>";
+		};
+		79DF0D7F274BD75C0095CFC3 /* Refactoring */ = {
+			isa = PBXGroup;
+			children = (
+				79B803AA27429E4600D0FD25 /* ChangePasswordViewController.swift */,
+				79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */,
+				79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */,
+			);
+			path = Refactoring;
 			sourceTree = "<group>";
 		};
 		A6707C3E6C05997E1ECED7E9 /* Frameworks */ = {
@@ -360,8 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79B80379274297AE00D0FD25 /* ViewController.swift in Sources */,
+				79DF0D7E274BCC360095CFC3 /* ChangePasswordPresenter.swift in Sources */,
 				7989DF88274A2EAC007C7811 /* ChangePasswordViewModel.swift in Sources */,
 				79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */,
+				79DF0D7C274BCBC70095CFC3 /* ChangePasswordViewCommands.swift in Sources */,
 				79B803A72742983E00D0FD25 /* main.swift in Sources */,
 				79B803AB27429E4600D0FD25 /* ChangePasswordViewController.swift in Sources */,
 				79B803A927429B8F00D0FD25 /* PasswordChanger.swift in Sources */,

@@ -90,9 +90,9 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         XCTAssertTrue(textfield.enablesReturnKeyAutomatically, "enablesReturnKeyAutomatically")
     }
     
-    private func putFocusOn(_ inputFocus: ChangePasswordViewModel.InputFocus) {
+    private func putFocusOn(_ inputFocus: InputFocus) {
         putViewInHierarchy(sut)
-        sut.viewModel.inputFocus = inputFocus
+        sut.updateInputFocus(inputFocus)
     }
     
     func test_tappingCancel_withFocusOnOldPassword_shouldResignThatFocus(){
