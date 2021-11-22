@@ -9,25 +9,30 @@ import Foundation
 
 class ChangePasswordPresenter {
     private unowned var view: ChangePasswordViewCommands!
-    private var viewModel: ChangePasswordViewModel
+    private var labels: ChangePasswordLabels
     private var securityToken: String
     private var passwordChanger: PasswordChanging
     
-    init(view: ChangePasswordViewCommands, viewModel: ChangePasswordViewModel,securityToken: String, passwordChanger: PasswordChanging) {
+    init(view: ChangePasswordViewCommands, labels: ChangePasswordLabels,securityToken: String, passwordChanger: PasswordChanging) {
         self.view = view
-        self.viewModel = viewModel
+        self.labels = labels
         self.securityToken = securityToken
         self.passwordChanger = passwordChanger
     }
- 
-    private func startOver(){
-        view.clearAllPasswordFields()
-        view.updateInputFocus(.oldPassword)
-        view.hideBlurView()
-        view.setCancelButtonEnable(true)
+    
+    func cancel(){
+        view.updateInputFocus(.noKeyboard)
+        view.dismissModal()
     }
     
-    func setUpWaitingAppearance() {
+    func changePassword(passwordInputs: PasswordInputs){
+        guard validateInputs(passwordInputs: passwordInputs) else { return }
+        setUpWaitingAppearance()
+        attemptToChangePassword(passwordInputs: passwordInputs)
+    }
+    
+    
+    private func setUpWaitingAppearance() {
         view.updateInputFocus(.noKeyboard)
         view.setCancelButtonEnable(false)
         view.showBlurView()
@@ -35,28 +40,28 @@ class ChangePasswordPresenter {
     }
     
     
-    func validateInputs() -> Bool {
-        if viewModel.isOldPasswordIsEmpty {
+    private func validateInputs(passwordInputs: PasswordInputs) -> Bool {
+        if passwordInputs.isOldPasswordIsEmpty {
             view.updateInputFocus(.oldPassword)
             return false
         }
         
-        if viewModel.isNewPasswordIsEmpty {
-            view.showAlert(message: viewModel.enterNewPasswordTooShortMessage) { [weak self] in
+        if passwordInputs.isNewPasswordIsEmpty {
+            view.showAlert(message: labels.enterNewPasswordTooShortMessage) { [weak self] in
                 self?.view.updateInputFocus(.newPassword)
             }
             return false
         }
         
-        if viewModel.isNewPasswordTooShort {
-            view.showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
+        if passwordInputs.isNewPasswordTooShort {
+            view.showAlert(message: labels.newPasswordTooShortMessage) { [weak self] in
                 self?.resetNewPasswords()
             }
             return false
         }
         
-        if viewModel.isConfirmPasswordMismatched {
-            view.showAlert(message: viewModel.confirmationPasswordDoesNotMatchMessage) {[weak self] in
+        if passwordInputs.isConfirmPasswordMismatched {
+            view.showAlert(message: labels.confirmationPasswordDoesNotMatchMessage) {[weak self] in
                 self?.resetNewPasswords()
             }
             return false
@@ -64,8 +69,8 @@ class ChangePasswordPresenter {
         return true
     }
     
-    func attemptToChangePassword() {
-        passwordChanger.change(securityToken: securityToken, oldPassword: viewModel.oldPassword, newPassword: viewModel.newPassword, onSuccess: { [weak self] in
+    private func attemptToChangePassword(passwordInputs: PasswordInputs) {
+        passwordChanger.change(securityToken: securityToken, oldPassword: passwordInputs.oldPassword, newPassword: passwordInputs.newPassword, onSuccess: { [weak self] in
             self?.handleSuccess()
         }, onFailure: { [weak self] message in
             self?.handleFailure(message: message)
@@ -73,10 +78,10 @@ class ChangePasswordPresenter {
     }
     
     
-     private func handleSuccess(){
-         view.hideActivityIndicator()
-         view.showAlert(message: viewModel.successMessage) { [weak self] in
-             self?.view.dismissModal()
+    private func handleSuccess(){
+        view.hideActivityIndicator()
+        view.showAlert(message: labels.successMessage) { [weak self] in
+            self?.view.dismissModal()
         }
     }
     
@@ -86,6 +91,13 @@ class ChangePasswordPresenter {
             self?.startOver()
             
         }
+    }
+    
+    private func startOver(){
+        view.clearAllPasswordFields()
+        view.updateInputFocus(.oldPassword)
+        view.hideBlurView()
+        view.setCancelButtonEnable(true)
     }
     
     private func resetNewPasswords(){

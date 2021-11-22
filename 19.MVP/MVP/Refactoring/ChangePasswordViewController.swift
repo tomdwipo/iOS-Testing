@@ -20,11 +20,11 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     lazy var passwordChanger: PasswordChanging = PasswordChanger()
     var securityToken = ""
     
-    var viewModel: ChangePasswordViewModel!
+    var labels: ChangePasswordLabels!
 
-    private lazy var presenter = ChangePasswordPresenter(view: self, viewModel: viewModel, securityToken: securityToken, passwordChanger: passwordChanger)
+    private lazy var presenter = ChangePasswordPresenter(view: self, labels: labels, securityToken: securityToken, passwordChanger: passwordChanger)
     
-   
+
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.dark))
     let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     
@@ -43,37 +43,28 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func cancel(){
-        updateInputFocus(.noKeyboard)
-        dismiss(animated: true)
+        presenter.cancel()
     }
     
     
     @IBAction private func changePassword(){
-        updateViewModelToTextFields()
-        guard presenter.validateInputs() else { return }
-        presenter.setUpWaitingAppearance()
-        presenter.attemptToChangePassword()
+        let passwordInputs = PasswordInputs(oldPassword: oldPasswordTextField.text ?? "", newPassword: newPasswordTextField.text ?? "", confirmPassword: confirmPasswordTextField.text ?? "")
+        presenter.changePassword(passwordInputs: passwordInputs)
         
     }
- 
 }
 
 extension ChangePasswordViewController {
  
     
     private func setLabels(){
-        navigationBar.topItem?.title = viewModel.title
-        oldPasswordTextField.placeholder = viewModel.oldPasswordPlaceholder
-        newPasswordTextField.placeholder = viewModel.newPasswordPlaceholder
-        confirmPasswordTextField.placeholder = viewModel.confirmPasswordPlaceholder
-        submitButton.setTitle(viewModel.submitButtonLabel, for: UIControl.State.normal)
+        navigationBar.topItem?.title = labels.title
+        oldPasswordTextField.placeholder = labels.oldPasswordPlaceholder
+        newPasswordTextField.placeholder = labels.newPasswordPlaceholder
+        confirmPasswordTextField.placeholder = labels.confirmPasswordPlaceholder
+        submitButton.setTitle(labels.submitButtonLabel, for: UIControl.State.normal)
     }
-    
-    private func updateViewModelToTextFields(){
-        viewModel.oldPassword = oldPasswordTextField.text ?? ""
-        viewModel.newPassword = newPasswordTextField.text ?? ""
-        viewModel.confirmPassword = confirmPasswordTextField.text ?? ""
-    }
+
 }
 
 
@@ -157,12 +148,13 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
     }
+
 }
 
 extension ChangePasswordViewController {
     private func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: viewModel.okButtonLabel, style: UIAlertAction.Style.default, handler: okAction)
+        let okButton = UIAlertAction(title: labels.okButtonLabel, style: UIAlertAction.Style.default, handler: okAction)
         alertController.addAction(okButton)
         alertController.preferredAction = okButton
         self.present(alertController, animated: true)

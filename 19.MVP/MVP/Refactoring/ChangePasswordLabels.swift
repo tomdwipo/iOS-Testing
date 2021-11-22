@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChangePasswordViewModel {
+struct ChangePasswordLabels {
     let okButtonLabel: String
     let enterNewPasswordTooShortMessage: String
     let newPasswordTooShortMessage: String
@@ -18,15 +18,6 @@ struct ChangePasswordViewModel {
     let newPasswordPlaceholder: String
     let confirmPasswordPlaceholder: String
     let submitButtonLabel: String
-     
-    var oldPassword = ""
-    var newPassword = ""
-    var confirmPassword = ""
-    
-    var isOldPasswordIsEmpty: Bool { oldPassword.isEmpty }
-    var isNewPasswordIsEmpty: Bool { newPassword.isEmpty }
-    var isNewPasswordTooShort: Bool { newPassword.count < 6 }
-    var isConfirmPasswordMismatched: Bool { newPassword != confirmPassword }
 }
 
 

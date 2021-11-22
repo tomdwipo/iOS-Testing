@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		11A0C2DD43078C3E18C8BBD0 /* Pods_MVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A47AF86F46468E9E3488EF /* Pods_MVPTests.framework */; };
 		70FFA662F8E7EB1500E13020 /* Pods_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD949CB40F09914464B748C /* Pods_MVP.framework */; };
-		7989DF88274A2EAC007C7811 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */; };
+		7989DF88274A2EAC007C7811 /* ChangePasswordLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7989DF87274A2EAC007C7811 /* ChangePasswordLabels.swift */; };
 		79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80374274297AE00D0FD25 /* AppDelegate.swift */; };
 		79B80379274297AE00D0FD25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B80378274297AE00D0FD25 /* ViewController.swift */; };
 		79B8037C274297AE00D0FD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B8037A274297AE00D0FD25 /* Main.storyboard */; };
@@ -29,6 +29,7 @@
 		79DF0D7A274BCAD90095CFC3 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DF0D6B274BCA9C0095CFC3 /* ViewControllerPresentationSpy.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		79DF0D7C274BCBC70095CFC3 /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */; };
 		79DF0D7E274BCC360095CFC3 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */; };
+		79DF0D81274BED660095CFC3 /* PasswordInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF0D80274BED660095CFC3 /* PasswordInputs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		41778C07BCF326FCE6B88430 /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
 		429E37907896D8CB293BFE83 /* Pods-Refactoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refactoring.release.xcconfig"; path = "Target Support Files/Pods-Refactoring/Pods-Refactoring.release.xcconfig"; sourceTree = "<group>"; };
 		5ADE4066E9B5B4D49B6FB6F3 /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
-		7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		7989DF87274A2EAC007C7811 /* ChangePasswordLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordLabels.swift; sourceTree = "<group>"; };
 		79B80371274297AE00D0FD25 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79B80374274297AE00D0FD25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79B80378274297AE00D0FD25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		79DF0D70274BCA9C0095CFC3 /* MVVMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
 		79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		79DF0D80274BED660095CFC3 /* PasswordInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputs.swift; sourceTree = "<group>"; };
 		A1AA8C91A13E56C8065633CC /* Pods-RefactoringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RefactoringTests.release.xcconfig"; path = "Target Support Files/Pods-RefactoringTests/Pods-RefactoringTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEA6D0A472A76502623FDEA3 /* Pods-MVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPTests.debug.xcconfig"; path = "Target Support Files/Pods-MVPTests/Pods-MVPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFAFC6C3765EE4AFFD75C305 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +148,6 @@
 				79B80382274297B100D0FD25 /* Info.plist */,
 				79B803A62742983E00D0FD25 /* main.swift */,
 				79B803A827429B8F00D0FD25 /* PasswordChanger.swift */,
-				7989DF87274A2EAC007C7811 /* ChangePasswordViewModel.swift */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -172,6 +173,8 @@
 				79B803AA27429E4600D0FD25 /* ChangePasswordViewController.swift */,
 				79DF0D7B274BCBC70095CFC3 /* ChangePasswordViewCommands.swift */,
 				79DF0D7D274BCC360095CFC3 /* ChangePasswordPresenter.swift */,
+				79DF0D80274BED660095CFC3 /* PasswordInputs.swift */,
+				7989DF87274A2EAC007C7811 /* ChangePasswordLabels.swift */,
 			);
 			path = Refactoring;
 			sourceTree = "<group>";
@@ -375,8 +378,9 @@
 			files = (
 				79B80379274297AE00D0FD25 /* ViewController.swift in Sources */,
 				79DF0D7E274BCC360095CFC3 /* ChangePasswordPresenter.swift in Sources */,
-				7989DF88274A2EAC007C7811 /* ChangePasswordViewModel.swift in Sources */,
+				7989DF88274A2EAC007C7811 /* ChangePasswordLabels.swift in Sources */,
 				79B80375274297AE00D0FD25 /* AppDelegate.swift in Sources */,
+				79DF0D81274BED660095CFC3 /* PasswordInputs.swift in Sources */,
 				79DF0D7C274BCBC70095CFC3 /* ChangePasswordViewCommands.swift in Sources */,
 				79B803A72742983E00D0FD25 /* main.swift in Sources */,
 				79B803AB27429E4600D0FD25 /* ChangePasswordViewController.swift in Sources */,
