@@ -65,14 +65,14 @@ jobs:
     - name: Build and Test TableView
       run: xcodebuild clean build test -project 15.TableView/TableView.xcodeproj -scheme "TableView" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
 
-    - name: Build and Test Snapshot
-      run: xcodebuild clean build test -workspace 16.Snapshot/Snapshot.xcworkspace -scheme "Snapshot" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
-
-    - name: Build and Test Refactoring
-      run: xcodebuild clean build test -workspace 17.Refactoring/Refactoring.xcworkspace -scheme "Refactoring" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
-
-    - name: Build and Test MVVM
-      run: xcodebuild clean build test -workspace 18.MVVM/MVVM.xcworkspace -scheme "MVVM" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
-
-    - name: Build and Test MVP
-      run: xcodebuild clean build test -workspace 19.MVP/MVP.xcworkspace -scheme "MVP" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+#    - name: Build and Test Snapshot
+#      run: xcodebuild clean build test -workspace 16.Snapshot/Snapshot.xcworkspace -scheme "Snapshot" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+#
+#    - name: Build and Test Refactoring
+#      run: xcodebuild clean build test -workspace 17.Refactoring/Refactoring.xcworkspace -scheme "Refactoring" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+#
+#    - name: Build and Test MVVM
+#      run: xcodebuild clean build test -workspace 18.MVVM/MVVM.xcworkspace -scheme "MVVM" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+#
+#    - name: Build and Test MVP
+#      run: xcodebuild clean build test -workspace 19.MVP/MVP.xcworkspace -scheme "MVP" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
