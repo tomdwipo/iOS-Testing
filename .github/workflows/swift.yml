@@ -76,3 +76,6 @@ jobs:
 #
 #    - name: Build and Test MVP
 #      run: xcodebuild clean build test -workspace 19.MVP/MVP.xcworkspace -scheme "MVP" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES
+
+    - name: Build and Test TDD
+      run: xcodebuild clean build test -project 20.TDD/TDD.xcodeproj -scheme "TDD" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 13,OS=15.0" ONLY_ACTIVE_ARCH=YES

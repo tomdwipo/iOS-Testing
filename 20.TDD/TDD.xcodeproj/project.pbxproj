@@ -15,6 +15,8 @@
 		797441DC274E874D000D04EF /* TDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797441DB274E874D000D04EF /* TDDTests.swift */; };
 		797441F5274E87B4000D04EF /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797441F4274E87B4000D04EF /* TestingAppDelegate.swift */; };
 		797441F7274E87F0000D04EF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797441F6274E87F0000D04EF /* main.swift */; };
+		797441F9274E89D7000D04EF /* GreeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797441F8274E89D7000D04EF /* GreeterTests.swift */; };
+		797441FB274E8AAC000D04EF /* Greeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797441FA274E8AAC000D04EF /* Greeter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		797441E7274E874D000D04EF /* TDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		797441F4274E87B4000D04EF /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		797441F6274E87F0000D04EF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		797441F8274E89D7000D04EF /* GreeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreeterTests.swift; sourceTree = "<group>"; };
+		797441FA274E8AAC000D04EF /* Greeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				797441CF274E874D000D04EF /* LaunchScreen.storyboard */,
 				797441D2274E874D000D04EF /* Info.plist */,
 				797441F6274E87F0000D04EF /* main.swift */,
+				797441FA274E8AAC000D04EF /* Greeter.swift */,
 			);
 			path = TDD;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				797441DB274E874D000D04EF /* TDDTests.swift */,
 				797441F4274E87B4000D04EF /* TestingAppDelegate.swift */,
+				797441F8274E89D7000D04EF /* GreeterTests.swift */,
 			);
 			path = TDDTests;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			files = (
 				797441C9274E8749000D04EF /* ViewController.swift in Sources */,
 				797441C5274E8749000D04EF /* AppDelegate.swift in Sources */,
+				797441FB274E8AAC000D04EF /* Greeter.swift in Sources */,
 				797441F7274E87F0000D04EF /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797441F9274E89D7000D04EF /* GreeterTests.swift in Sources */,
 				797441DC274E874D000D04EF /* TDDTests.swift in Sources */,
 				797441F5274E87B4000D04EF /* TestingAppDelegate.swift in Sources */,
 			);
