@@ -14,7 +14,7 @@ struct Greeter {
         (12, "Good afternoon"),
         (17, "Good Evening"),
         (24, "SENTINEL"),
-
+        
     ]
     
     private let name: String
@@ -24,20 +24,24 @@ struct Greeter {
     }
     
     func greet(time: Date) -> String {
-       
-        
+        let hello = greeting(for: time)
+        if name.isEmpty {
+            return "\(hello)."
+        }else {
+            return "\(hello), \(name)."
+        }
+    }
+    
+    private func greeting(for time: Date) -> String {
         let theHour = hour(for: time)
         for (index, greetingTime) in greetingTimes.enumerated() {
             if greetingTime.from <= theHour && theHour < greetingTimes[index + 1].from {
-                if !name.isEmpty {
-                    return "\(greetingTime.greeting), \(name)."
-                }
-                return greetingTime.greeting + "."
+                return greetingTime.greeting
             }
         }
-         return ""
+        return ""
     }
-        
+    
     private func hour(for time: Date) -> Int {
         let components = Calendar.current.dateComponents([.hour], from: time)
         return components.hour ?? 0
