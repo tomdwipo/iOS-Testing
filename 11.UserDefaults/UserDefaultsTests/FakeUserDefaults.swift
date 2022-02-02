@@ -18,6 +18,4 @@ class FakeUserDefaults: UserDefaultsProtocol {
     func integer(forKey defaultName: String) -> Int {
         integers[defaultName] ?? 0
     }
-    
-    
 }
